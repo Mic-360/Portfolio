@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { footerLinks } from "@/lib/constants";
+import { FooterButtons } from "@/lib/constants";
 import Link from "next/link";
 import Meteors from "./magicui/meteors";
 import ShineBorder from "./magicui/shine-border";
@@ -83,20 +83,15 @@ const Footer: FC<FooterProps> = () => {
         </div>
       </div>
       <div className="flex my-10 items-center justify-center gap-x-2">
-        {footerLinks.map((button, idx) => (
-          <div className="relative" key={idx}>
-            <ShineBorder
-              borderRadius={22}
-              color={["#f5f5f5", "#a6a6a6", "#3d3d3d"]}
-            >
-              <Link
-                href={`https://www.${button}.com`}
-                className="flex items-center justify-center py-1 px-12 rounded-3xl border border-accent capitalize text-shade font-sans font-semibold hover:bg-accent hover:text-foreground transition-all duration-300 ease-in-out"
-              >
-                {button}
-              </Link>
-            </ShineBorder>
-          </div>
+        {FooterButtons.map((button, idx) => (
+          <Link
+            key={idx}
+            href={button.link}
+            className="flex items-center justify-center py-1 px-6 gap-x-4 rounded-3xl border border-accent capitalize text-shade font-sans font-semibold hover:bg-accent hover:text-foreground transition-all duration-300 ease-in-out"
+          >
+            {button.icon}
+            {button.name}
+          </Link>
         ))}
       </div>
     </footer>
