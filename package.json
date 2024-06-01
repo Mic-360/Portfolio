@@ -20,10 +20,13 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "babel-plugin-react-compiler": "0.0.0-experimental-487cb0e-20240529",
+    "clsx": "^2.1.1",
     "eslint": "^8",
     "eslint-config-next": "15.0.0-rc.0",
+    "framer-motion": "^11.2.10",
     "postcss": "^8",
     "prettier": "^3.2.5",
+    "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },

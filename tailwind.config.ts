@@ -15,8 +15,38 @@ const config: Config = {
         shade: "var(--shade)",
       },
       fontFamily: {
-        sans: ["var(--font-fira-code)"],
-        mono: ["var(--font-open-sans)"],
+        mono: ["var(--font-fira-code)"],
+        sans: ["var(--font-open-sans)"],
+      },
+      animation: {
+        meteor: "meteor 5s linear infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+      },
+      keyframes: {
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
+        "shine-pulse": {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
+        },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
       },
     },
   },
