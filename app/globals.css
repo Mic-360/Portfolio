@@ -4,15 +4,15 @@
 
 :root {
   --background: #121212;
-  --foreground: #F5F5F5;
-  --accent: #3D3D3D;
-  --shade: #A6A6A6;
+  --foreground: #f5f5f5;
+  --accent: #3d3d3d;
+  --shade: #a6a6a6;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #121212;
-    --foreground: #F5F5F5;
+    --foreground: #f5f5f5;
   }
 }
 
