@@ -1,0 +1,53 @@
+{
+  "extends": [
+    "next/core-web-vitals", // Next.js recommended base
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended" // Accessibility best practices
+  ],
+  "plugins": ["react-hooks"], // Lint React Hooks usage
+  "parserOptions": {
+    "ecmaVersion": "latest", // Modern JavaScript features
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "indent": ["error", 2], // 2-space indentation
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"],
+    "no-unused-vars": "warn",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off", // We'll often use TypeScript
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"], // Validate Next.js Link
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "no-console": ["warn", { "allow": ["warn", "error"] }], // Allow warnings and errors in console
+    "eqeqeq": "error", // Require === and !== for comparisons
+    "no-var": "error",
+    "prefer-const": "error",
+    "curly": "error"
+  },
+  "globals": {
+    "React": "readonly"
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Auto-detect React version
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"] // Support TypeScript
+      }
+    }
+  }
+}
