@@ -30,7 +30,7 @@ const WorkTable: FC<WorkTableProps> = () => {
                 {/* Two-column layout for small screens */}
                 <td className="p-4 font-mono tracking-tighter w-1/2">
                   <p>{work.Year}</p>
-                  <p>{work.Duration}</p>
+                  <p className="text-xs text-shade">{work.Duration}</p>
                 </td>
                 <td className="p-4 w-1/2">
                   <p>{work.Company}</p>
@@ -44,7 +44,7 @@ const WorkTable: FC<WorkTableProps> = () => {
                 {/* Three-column layout for larger screens */}
                 <td className="pl-14 p-4 font-mono tracking-tighter">
                   <p>{work.Year}</p>
-                  <p>{work.Duration}</p>
+                  <p className="text-xs text-shade">{work.Duration}</p>
                 </td>
                 <td className="pl-14 p-4">{work.Company}</td>
                 <td className="pl-14 p-4">
