@@ -97,10 +97,10 @@ const Footer: FC<FooterProps> = () => {
                 borderRadius={22}
                 color={["#f5f5f5", "#a6a6a6", "#3d3d3d"]}
               >
-                <p className="text-xl mb-2 font-sans">Site</p>
-                <p className="text-sm">Handcrafted by ME /</p>
-                <p className="text-sm">Designed by v0 /</p>
-                <p className="text-sm">Powered by Next Js</p>
+                <p className="text-xl mb-2 font-sans">Copyright</p>
+                <p className="text-sm">2024 - 2025 /</p>
+                <p className="text-sm">Bhaumik Singh /</p>
+                <p className="text-sm">All Rights Reserved /</p>
               </ShineBorder>
             </div>
           </div>
