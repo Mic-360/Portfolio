@@ -4,7 +4,11 @@ const nextConfig = {
     reactCompiler: true,
   },
   images: {
-    domains: ["wallpaperaccess.com"],
+    remotePatterns: [
+      {
+        hostname: "wallpaperaccess.com",
+      },
+    ],
   },
 };
 
