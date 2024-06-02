@@ -144,37 +144,43 @@ export default function Home() {
         </div>
         <div className="flex flex-col-reverse md:flex-row gap-4 items-center">
           <div className="text-shade font-sans md:w-7/12 space-y-4">
-            <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl bg-foreground text-accent">
-              <span className="text-lg">Front-end</span>
-              <span className="font-mono text-sm">
-                TypeScript / React / Vue / Vuex / Redux Toolkit / Next Js / Nuxt
-                / Jest / GraphQL / React Native / Puppeteer
-              </span>
-            </p>
-            <h3 className="flex justify-between items-center gap-x-8">
-              <p className="flex flex-col gap-y-2 w-1/2 border rounded-3xl px-4 py-2.5">
-                <span className="text-lg">Styles</span>
-                <span className="font-mono">
-                  SCSS / SASS / PostCSS / Ant. d / Material UI
+            <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
+              <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl bg-foreground text-accent">
+                <span className="text-lg">Front-end</span>
+                <span className="font-mono text-sm">
+                  TypeScript / React / Vue / Vuex / Redux Toolkit / Next Js /
+                  Nuxt / Jest / GraphQL / React Native / Puppeteer
                 </span>
               </p>
-              <p className="w-1/2 flex justify-center">
-                <Link
-                  href={"/"}
-                  className="flex items-center justify-center -space-x-4 w-fit"
-                >
-                  <Icons.github className="h-12 w-12 p-2.5 border rounded-full -z-10" />
-                  <Icons.right className="h-12 w-12 p-4 rounded-full bg-foreground text-accent -rotate-45" />
-                </Link>
+            </BoxReveal>
+            <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
+              <h3 className="flex justify-between items-center gap-x-8">
+                <p className="flex flex-col gap-y-2 w-1/2 border rounded-3xl px-4 py-2.5">
+                  <span className="text-lg">Styles</span>
+                  <span className="font-mono">
+                    SCSS / SASS / PostCSS / Ant. d / Material UI
+                  </span>
+                </p>
+                <p className="w-1/2 flex justify-center">
+                  <Link
+                    href={"/"}
+                    className="flex items-center justify-center -space-x-4 w-fit"
+                  >
+                    <Icons.github className="h-12 w-12 p-2.5 border rounded-full -z-10" />
+                    <Icons.right className="h-12 w-12 p-4 rounded-full bg-foreground text-accent -rotate-45" />
+                  </Link>
+                </p>
+              </h3>
+            </BoxReveal>
+            <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
+              <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl border border-shade">
+                <span className="text-lg">Back-end</span>
+                <span className="font-mono text-sm">
+                  Golang / Gin / GORM / PostgreSQL / MySQL / MongoDB / gRPC /
+                  Redis / Kafka / Node / Nest / TypeORM / Microservices
+                </span>
               </p>
-            </h3>
-            <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl border border-shade">
-              <span className="text-lg">Back-end</span>
-              <span className="font-mono text-sm">
-                Golang / Gin / GORM / PostgreSQL / MySQL / MongoDB / gRPC /
-                Redis / Kafka / Node / Nest / TypeORM / Microservices
-              </span>
-            </p>
+            </BoxReveal>
             <article className="flex text-sm items-center justify-between">
               <p>
                 Some of my{" "}
@@ -258,29 +264,35 @@ export default function Home() {
       </main>
       {/* work */}
       <section>
-        <div className="flex flex-col mt-20 px-8 mb-8 justify-end items-end">
-          <h2 className="text-foreground text-7xl font-semibold font-mono">
-            Work
-          </h2>
-          <p className="text-shade text-right text-sm">
-            I have worked with{" "}
-            <span className="text-foreground italic">
-              many companies and startups
-            </span>{" "}
-            and have{" "}
-            <span className="text-foreground italic">
-              experienced with many technologies
-            </span>
-            .
-          </p>
+        <div className="flex justify-end mt-20 px-8 mb-8">
+          <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
+            <div className="flex flex-col justify-end items-end">
+              <h2 className="text-foreground text-7xl font-semibold font-mono">
+                Work
+              </h2>
+              <p className="text-shade text-right text-sm">
+                I have worked with{" "}
+                <span className="text-foreground italic">
+                  many companies and startups
+                </span>{" "}
+                and have{" "}
+                <span className="text-foreground italic">
+                  experienced with many technologies
+                </span>
+                .
+              </p>
+            </div>
+          </BoxReveal>
         </div>
         <WorkTable />
         <div className="flex px-8 mb-8 py-4 justify-end items-end">
-          <p className="text-shade text-sm w-full text-right">
-            <span className="text-shade">Work Experience</span>
-            <br />
-            <span className="text-foreground italic">4 years 9 months</span>
-          </p>
+          <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
+            <p className="text-shade text-sm w-full text-right">
+              <span className="text-shade">Work Experience</span>
+              <br />
+              <span className="text-foreground italic">4 years 9 months</span>
+            </p>
+          </BoxReveal>
         </div>
       </section>
     </div>
