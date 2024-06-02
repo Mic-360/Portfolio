@@ -58,7 +58,9 @@ const Footer: FC<FooterProps> = () => {
       <div className="flex flex-col-reverse md:flex-row gap-8">
         <div className="font-mono font-semibold space-y-8 pl-10 ">
           <div>
-            <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl">Bhaumik</h2>
+            <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl">
+              Bhaumik
+            </h2>
           </div>
           <div className="flex gap-x-10 md:gap-x-20 lg:gap-x-32 items-center">
             <p className="font-sans font-normal text-shade tracking-wider text-sm md:text-lg">
@@ -66,7 +68,9 @@ const Footer: FC<FooterProps> = () => {
               <br />
               developer
             </p>
-            <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl">Singh</h2>
+            <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl">
+              Singh
+            </h2>
           </div>
         </div>
         <div className="text-left flex flex-col items-start md:items-center space-y-8 w-full font-sans px-8 lg:items-end">
@@ -107,7 +111,7 @@ const Footer: FC<FooterProps> = () => {
           <Link
             key={idx}
             href={button.link}
-            className="flex items-center justify-center py-1 px-6 gap-x-4 rounded-3xl border border-accent capitalize text-shade font-sans font-semibold hover:bg-accent hover:text-foreground transition-all duration-300 ease-in-out"
+            className="flex items-center justify-center px-6 py-2 gap-x-4 rounded-3xl border border-accent capitalize text-shade font-sans font-semibold hover:bg-accent hover:text-foreground transition-all duration-300 ease-in-out"
           >
             {button.icon}
             {button.name}

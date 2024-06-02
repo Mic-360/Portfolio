@@ -39,7 +39,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.24.1":
+"@babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.24.1":
   version: 7.24.6
   resolution: "@babel/runtime@npm:7.24.6"
   dependencies:
@@ -512,12 +512,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-compose-refs@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@radix-ui/react-compose-refs@npm:1.0.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.13.10"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c9/2b9a613b6db5bff8865588b6bf4065f73021b3d16c0a90b2d4c23deceeb63612f1f15de188227ebdc5f88222cab031be617a9dd025874c0487b303be3e5cc2a8
+  languageName: node
+  linkType: hard
+
 "@radix-ui/react-icons@npm:^1.3.0":
   version: 1.3.0
   resolution: "@radix-ui/react-icons@npm:1.3.0"
   peerDependencies:
     react: ^16.x || ^17.x || ^18.x
   checksum: 10c9/6990c28d480f047c8219b25fa13601a6460d0f9a7fb8806cc54597721b4c130e6cf8a8c636fa6eb210f81a23f42ce1195ef9bc004f428c2da573bc8389e052d3
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-slot@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@radix-ui/react-slot@npm:1.0.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.13.10"
+    "@radix-ui/react-compose-refs": "npm:1.0.1"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c9/734866561e991438fbcf22af06e56b272ed6ee8f7b536489ee3bf2f736f8b53bf6bc14ebde94834aa0aceda854d018a0ce20bb171defffbaed1f566006cbb887
   languageName: node
   linkType: hard
 
@@ -1146,6 +1177,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"class-variance-authority@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "class-variance-authority@npm:0.7.0"
+  dependencies:
+    clsx: "npm:2.0.0"
+  checksum: 10c9/06646e82953e577fb8834100d763f1e5ecb808b8a1fba6244e94b20603865b134ff2296e30432449793baaeb02282cce617afba6981afe18b6846f1f8e9485ca
+  languageName: node
+  linkType: hard
+
 "clean-stack@npm:^2.0.0":
   version: 2.2.0
   resolution: "clean-stack@npm:2.2.0"
@@ -1157,6 +1197,13 @@ __metadata:
   version: 0.0.1
   resolution: "client-only@npm:0.0.1"
   checksum: 10c9/bb1df6dc19347768c692ac66747486b7a3cc092ec664d597a07fafab409770a016a159dd409e0c80df194ebee5ca591ae01849e990c71aa04c9a019011cabef2
+  languageName: node
+  linkType: hard
+
+"clsx@npm:2.0.0":
+  version: 2.0.0
+  resolution: "clsx@npm:2.0.0"
+  checksum: 10c9/943766d1b02fee3538c871e56638d87f973fbc2d6291ce221215ea436fdecb9be97ad323f411839c2d52c45640c449b1a53fbfe7e8b3d529b4e263308b630c9a
   languageName: node
   linkType: hard
 
@@ -1409,6 +1456,34 @@ __metadata:
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
   checksum: 10c9/9b1d3e1baefeaf7d70799db8774149cef33b97183a6addceeba0cf6b85ba23ee2686f302f14482006df32df75d32b17c509c143a3689627929e4a8efaf483952
+  languageName: node
+  linkType: hard
+
+"embla-carousel-react@npm:^8.1.3":
+  version: 8.1.3
+  resolution: "embla-carousel-react@npm:8.1.3"
+  dependencies:
+    embla-carousel: "npm:8.1.3"
+    embla-carousel-reactive-utils: "npm:8.1.3"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.1 || ^18.0.0
+  checksum: 10c9/9fca5854ae5a12915daa43307fc3a248d01cebd6c8f462d37cf2545b8ab1132d6d965c1dbe6ff7bde18249a3b0d112d3c078ff0e0c1c9cbae6b9894c6a1cc1c1
+  languageName: node
+  linkType: hard
+
+"embla-carousel-reactive-utils@npm:8.1.3":
+  version: 8.1.3
+  resolution: "embla-carousel-reactive-utils@npm:8.1.3"
+  peerDependencies:
+    embla-carousel: 8.1.3
+  checksum: 10c9/892c178ada2398fb97beeaadd3c990c9968af73b98bdb71410cf7a7ad75b48adff8889136594232bc2f1fccf6dc9de4255c991a3c86879d597c9a058fb983e26
+  languageName: node
+  linkType: hard
+
+"embla-carousel@npm:8.1.3":
+  version: 8.1.3
+  resolution: "embla-carousel@npm:8.1.3"
+  checksum: 10c9/b4d9584cd39f50f0840413b45b7a9bd912fb6dce87f45566328781b2e9bbebae3cccd72477fc1d22ee5ccad64a7329cbe99c4e29612fdcc2af491e70f6f811fe
   languageName: node
   linkType: hard
 
@@ -3428,11 +3503,14 @@ __metadata:
   resolution: "portfolio@workspace:."
   dependencies:
     "@radix-ui/react-icons": "npm:^1.3.0"
+    "@radix-ui/react-slot": "npm:^1.0.2"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
     babel-plugin-react-compiler: "npm:0.0.0-experimental-487cb0e-20240529"
+    class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.1"
+    embla-carousel-react: "npm:^8.1.3"
     eslint: "npm:^8"
     eslint-config-next: "npm:15.0.0-rc.0"
     framer-motion: "npm:^11.2.10"
@@ -3443,6 +3521,7 @@ __metadata:
     react-dom: "npm:19.0.0-rc-f994737d14-20240522"
     tailwind-merge: "npm:^2.3.0"
     tailwindcss: "npm:^3.4.1"
+    tailwindcss-animate: "npm:^1.0.7"
     typescript: "npm:^5"
   languageName: unknown
   linkType: soft
@@ -4230,6 +4309,15 @@ __metadata:
   dependencies:
     "@babel/runtime": "npm:^7.24.1"
   checksum: 10c9/cf3b126bee82bc9ff3f60f9601b66925418db6906544198b637487b25fba1c9c307734ca37ccb8fa2355f69ad0c5aff34c5dce460809addb459a93205d9a0abe
+  languageName: node
+  linkType: hard
+
+"tailwindcss-animate@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "tailwindcss-animate@npm:1.0.7"
+  peerDependencies:
+    tailwindcss: "*"
+  checksum: 10c9/ef176fbb0bf9dca84178b35b6a9615cd756358ea80be9c575456d12ecd7f3c431e9e571915c7df72959dc798a730959e9a4739d59eab55d8cc6db390870ff0d2
   languageName: node
   linkType: hard
 
