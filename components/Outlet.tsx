@@ -9,7 +9,7 @@ interface HeaderProps {}
 
 const Header: FC<HeaderProps> = () => {
   return (
-    <nav className="sticky top-1 flex items-center justify-between py-2 font-sans overflow-hidden backdrop-blur-xl rounded-3xl px-2 sm:px-10">
+    <nav className="sticky top-0 flex items-center justify-between py-2 font-sans overflow-hidden bg-background z-50 rounded-3xl px-2 sm:px-10">
       <Meteors number={30} />
       <h1 className="text-lg md:text-3xl w-full md:w-24 cursor-none font-medium">
         Bhaumik Singh
