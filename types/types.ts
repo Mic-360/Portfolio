@@ -5,3 +5,11 @@ export type FooterButton = {
   name: string;
   icon: JSX.Element;
 };
+
+export type Work = {
+  Year: string;
+  Company: string;
+  Duration: string;
+  Role: string;
+  Skills: string;
+};

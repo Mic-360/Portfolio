@@ -1,3 +1,4 @@
+import WorkTable from "@/components/WorkTable";
 import BoxReveal from "@/components/magicui/box-reveal";
 import {
   Carousel,
@@ -13,9 +14,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans items-center justify-items-center min-h-screen px-8 py-8">
+    <div className="font-sans items-center justify-items-center min-h-screen py-8">
       {/* banner */}
-      <header className="space-y-4">
+      <header className="space-y-4 px-8">
         <div className="mt-14 flex justify-between items-center">
           <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
             <h1 className="font-mono text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold">
@@ -82,7 +83,7 @@ export default function Home() {
         </div>
       </header>
       {/* Carousel  */}
-      <section className="px-8 py-10 mb-20">
+      <section className="px-16 py-10 mb-20">
         <Carousel>
           <CarouselContent>
             {Array.from({ length: 6 }).map((_, index) => (
@@ -128,7 +129,7 @@ export default function Home() {
         </Carousel>
       </section>
       {/* About me */}
-      <main>
+      <main className="px-8">
         <div className="flex flex-col md:flex-row gap-4 justify-between items-start my-20">
           <h2 className="text-foreground w-11/12 font-medium font-mono">
             .../About me...
@@ -141,8 +142,8 @@ export default function Home() {
             <span className="text-foreground italic">5 years</span> experience.
           </p>
         </div>
-        <div className="flex flex-col-reverse md:flex-row gap-4">
-          <div className="text-shade font-sans md:w-6/12 space-y-4">
+        <div className="flex flex-col-reverse md:flex-row gap-4 items-center">
+          <div className="text-shade font-sans md:w-7/12 space-y-4">
             <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl bg-foreground text-accent">
               <span className="text-lg">Front-end</span>
               <span className="font-mono text-sm">
@@ -255,6 +256,33 @@ export default function Home() {
           </div>
         </div>
       </main>
+      {/* work */}
+      <section>
+        <div className="flex flex-col mt-20 px-8 mb-8 justify-end items-end">
+          <h2 className="text-foreground text-7xl font-semibold font-mono">
+            Work
+          </h2>
+          <p className="text-shade text-right text-sm">
+            I have worked with{" "}
+            <span className="text-foreground italic">
+              many companies and startups
+            </span>{" "}
+            and have{" "}
+            <span className="text-foreground italic">
+              experienced with many technologies
+            </span>
+            .
+          </p>
+        </div>
+        <WorkTable />
+        <div className="flex px-8 mb-8 py-4 justify-end items-end">
+          <p className="text-shade text-sm w-full text-right">
+            <span className="text-shade">Work Experience</span>
+            <br />
+            <span className="text-foreground italic">4 years 9 months</span>
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
