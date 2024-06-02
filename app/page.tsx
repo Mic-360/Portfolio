@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { FooterButtons } from "@/lib/constants";
 import { Icons } from "@/lib/icons";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -64,7 +65,7 @@ export default function Home() {
             <Icons.right className="h-4 w-4" />
           </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:flex px-8 py-8 items-start md:items-center justify-center gap-2.5">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:flex px-4 md:px-6 lg:px-8 py-8 items-start md:items-center justify-center gap-2.5">
           {FooterButtons.map(
             (button, idx) =>
               button.name !== "e-mail" && (
@@ -126,6 +127,134 @@ export default function Home() {
           <CarouselNext className="backdrop-blur-lg bg-background" />
         </Carousel>
       </section>
+      {/* About me */}
+      <main>
+        <div className="flex flex-col md:flex-row gap-4 justify-between items-start my-20">
+          <h2 className="text-foreground w-11/12 font-medium font-mono">
+            .../About me...
+          </h2>
+          <p className="text-shade w-full">
+            Hello! I&apos;m{" "}
+            <span className="text-foreground italic">Bhaumik</span>, I&apos;m a
+            full-stack developer.
+            <br /> More than{" "}
+            <span className="text-foreground italic">5 years</span> experience.
+          </p>
+        </div>
+        <div className="flex flex-col-reverse md:flex-row gap-4">
+          <div className="text-shade font-sans md:w-6/12 space-y-4">
+            <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl bg-foreground text-accent">
+              <span className="text-lg">Front-end</span>
+              <span className="font-mono text-sm">
+                TypeScript / React / Vue / Vuex / Redux Toolkit / Next Js / Nuxt
+                / Jest / GraphQL / React Native / Puppeteer
+              </span>
+            </p>
+            <h3 className="flex justify-between items-center gap-x-8">
+              <p className="flex flex-col gap-y-2 w-1/2 border rounded-3xl px-4 py-2.5">
+                <span className="text-lg">Styles</span>
+                <span className="font-mono">
+                  SCSS / SASS / PostCSS / Ant. d / Material UI
+                </span>
+              </p>
+              <p className="w-1/2 flex justify-center">
+                <Link
+                  href={"/"}
+                  className="flex items-center justify-center -space-x-4 w-fit"
+                >
+                  <Icons.github className="h-12 w-12 p-2.5 border rounded-full -z-10" />
+                  <Icons.right className="h-12 w-12 p-4 rounded-full bg-foreground text-accent -rotate-45" />
+                </Link>
+              </p>
+            </h3>
+            <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl border border-shade">
+              <span className="text-lg">Back-end</span>
+              <span className="font-mono text-sm">
+                Golang / Gin / GORM / PostgreSQL / MySQL / MongoDB / gRPC /
+                Redis / Kafka / Node / Nest / TypeORM / Microservices
+              </span>
+            </p>
+            <article className="flex text-sm items-center justify-between">
+              <p>
+                Some of my{" "}
+                <span className="italic text-foreground">
+                  favorite technologies, <br />
+                  topics, or tools
+                </span>{" "}
+                that I worked with.
+              </p>
+              <h3 className="border border-shade rounded-3xl py-2.5 px-4 space-y-2">
+                <p className="text-lg">DevOps</p>
+                <p className="font-mono">
+                  Nginx / Brotli / Docker /<br /> (CI / CD) / k8s / bash
+                </p>
+              </h3>
+            </article>
+          </div>
+          <div className="grid grid-cols-2 grid-rows-4 sm:grid-rows-3 sm:grid-cols-3 gap-4 md:w-1/2 p-2">
+            <div className="relative h-40">
+              <Image
+                alt="Me speaking on stage at React Summit about the future of Next.js"
+                src="https://wallpaperaccess.com/full/628353.jpg"
+                fill
+                sizes="(max-width: 768px) 213px, 33vw"
+                priority
+                className="rounded-lg object-cover"
+              />
+            </div>
+            <div className="relative sm:row-span-2 row-span-1">
+              <Image
+                alt="Me standing on stage at Reactathon delivering the keynote"
+                src="https://wallpaperaccess.com/full/628353.jpg"
+                fill
+                sizes="(max-width: 768px) 213px, 33vw"
+                priority
+                className="rounded-lg object-cover object-top sm:object-center"
+              />
+            </div>
+            <div className="relative">
+              <Image
+                alt="Me and Guillermo Rauch on stage for Vercel Ship, answering questions from the Next.js community"
+                src="https://wallpaperaccess.com/full/628353.jpg"
+                fill
+                sizes="(max-width: 768px) 213px, 33vw"
+                priority
+                className="rounded-lg object-cover"
+              />
+            </div>
+            <div className="relative row-span-2">
+              <Image
+                alt="Me, Lydia, and Delba filming the Next.js Conf keynote"
+                src="https://wallpaperaccess.com/full/628353.jpg"
+                fill
+                sizes="(max-width: 768px) 213px, 33vw"
+                priority
+                className="rounded-lg object-cover sm:object-center"
+              />
+            </div>
+            <div className="relative row-span-2">
+              <Image
+                alt="My badge on top of a pile of badges from a Vercel meetup we held"
+                src="https://wallpaperaccess.com/full/628353.jpg"
+                fill
+                sizes="(max-width: 768px) 213px, 33vw"
+                priority
+                className="rounded-lg object-cover"
+              />
+            </div>
+            <div className="relative h-40">
+              <Image
+                alt="Me standing on stage at SmashingConf giving a talk about my optimism for the web"
+                src="https://wallpaperaccess.com/full/628353.jpg"
+                fill
+                sizes="(max-width: 768px) 213px, 33vw"
+                priority
+                className="rounded-lg object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
