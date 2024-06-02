@@ -1,3 +1,4 @@
+import Projects from "@/components/Projects";
 import WorkTable from "@/components/WorkTable";
 import BoxReveal from "@/components/magicui/box-reveal";
 import {
@@ -161,7 +162,7 @@ export default function Home() {
                     SCSS / SASS / PostCSS / Ant. d / Material UI
                   </span>
                 </p>
-                <p className="w-1/2 flex justify-center">
+                <div className="w-1/2 flex justify-center">
                   <Link
                     href={"/"}
                     className="flex items-center justify-center -space-x-4 w-fit"
@@ -169,7 +170,7 @@ export default function Home() {
                     <Icons.github className="h-12 w-12 p-2.5 border rounded-full -z-10" />
                     <Icons.right className="h-12 w-12 p-4 rounded-full bg-foreground text-accent -rotate-45" />
                   </Link>
-                </p>
+                </div>
               </h3>
             </BoxReveal>
             <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
@@ -294,6 +295,17 @@ export default function Home() {
             </p>
           </BoxReveal>
         </div>
+      </section>
+      {/* projects */}
+      <section className="px-10">
+        <div className="flex justify-center items-center my-10">
+          <h2 className="text-foreground text-xl font-medium font-mono">
+            .../Projects...
+          </h2>
+        </div>
+        <Projects />
+        <Projects />
+        <Projects />
       </section>
     </div>
   );
