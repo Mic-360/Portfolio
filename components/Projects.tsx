@@ -8,10 +8,10 @@ interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row gap-10 mb-20">
-      <div className="flex flex-col gap-y-8 w-1/3">
+    <div className="flex flex-col-reverse lg:flex-row gap-10 mb-20 lg:justify-between">
+      <div className="flex flex-col gap-y-8">
         <h1 className="text-xl">GoStat</h1>
-        <div className="grid grid-cols-3 gap-x-3 gap-y-2">
+        <div className="grid grid-cols-3 gap-x-3 gap-y-2 w-4/5 sm:w-2/5 lg:w-2/5">
           {FooterButtons.map((button, idx) => (
             <Link
               key={idx}
@@ -22,7 +22,7 @@ const Projects: FC<ProjectsProps> = () => {
             </Link>
           ))}
         </div>
-        <article className="text-shade space-y-4 my-10">
+        <article className="text-shade space-y-4 my-10 md:w-2/3">
           <p>
             GOStat a cutting-edge{" "}
             <span className="text-foreground">microservice-based</span>{" "}
@@ -54,8 +54,8 @@ const Projects: FC<ProjectsProps> = () => {
               alt="GOStat"
               src="https://wallpaperaccess.com/full/628353.jpg"
               priority
-              height={500}
-              width={500}
+              height={800}
+              width={800}
               className="rounded-3xl object-cover"
             />
             <div className="absolute right-0 bottom-0">
