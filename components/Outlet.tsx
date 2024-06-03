@@ -9,43 +9,35 @@ interface HeaderProps {}
 
 const Header: FC<HeaderProps> = () => {
   return (
-    <nav className="sticky top-0 flex items-center justify-between py-2 font-sans overflow-hidden bg-background z-50 rounded-3xl px-2 sm:px-10">
-      <Meteors number={30} />
-      <h1 className="text-lg md:text-3xl w-full md:w-24 cursor-none font-medium">
-        Bhaumik Singh
-      </h1>
-      <ul className="md:flex gap-x-4 cursor-pointer text-foreground transition-all duration-300 ease-in-out hidden">
-        <li className="py-1 px-4 rounded-3xl capitalize font-sans font-light hover:bg-accent hover:text-shade hover:underline underline-offset-2 transition-all duration-300 ease-in-out">
-          <Link href="#about">
-            About
-            <span className="font-mono font-normal text-xs pl-1">\.. </span>
-          </Link>
-        </li>
-        <li className="py-1 px-4 rounded-3xl capitalize font-sans font-light hover:bg-accent hover:text-shade hover:underline underline-offset-2 transition-all duration-300 ease-in-out">
-          <Link href="#project">
-            Project
-            <span className="font-mono font-normal text-xs pl-1">\.. </span>
-          </Link>
-        </li>
-        <li className="py-1 px-4 rounded-3xl capitalize font-sans font-light hover:bg-accent hover:text-shade hover:underline underline-offset-2 transition-all duration-300 ease-in-out">
-          <Link href="#article">
-            Article
-            <span className="font-mono font-normal text-xs pl-1">\.. </span>
-          </Link>
-        </li>
-        <li className="py-1 px-4 rounded-3xl capitalize font-sans font-light hover:bg-accent hover:text-shade hover:underline underline-offset-2 transition-all duration-300 ease-in-out">
-          <Link href="#contact">
-            Contact
-            <span className="font-mono font-normal text-xs pl-1">\.. </span>
-          </Link>
-        </li>
-      </ul>
-      <Link
-        href="https://github.com/Mic-360/portfolio"
-        className="cursor-pointer"
-      >
-        <Icons.github className="h-6 w-6" />
-      </Link>
+    <nav className="py-2 font-sans overflow-hidden bg-background z-50 rounded-3xl px-2 sm:px-10">
+      <div className="sticky top-0">
+        <Meteors />
+      </div>
+      <div className="flex items-center justify-between">
+        <h1 className="text-lg md:text-3xl w-full md:w-24 cursor-none font-medium">
+          Bhaumik Singh
+        </h1>
+        <ul className="md:flex gap-x-4 cursor-pointer text-foreground transition-all duration-300 ease-in-out hidden">
+          <li className="py-1 px-4 rounded-3xl capitalize font-sans font-light hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
+            <Link href="#about">About</Link>
+          </li>
+          <li className="py-1 px-4 rounded-3xl capitalize font-sans font-light hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
+            <Link href="#project">Project</Link>
+          </li>
+          <li className="py-1 px-4 rounded-3xl capitalize font-sans font-light hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
+            <Link href="#article">Article</Link>
+          </li>
+          <li className="py-1 px-4 rounded-3xl capitalize font-sans font-light hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
+            <Link href="#contact">Contact</Link>
+          </li>
+        </ul>
+        <Link
+          href="https://github.com/Mic-360/portfolio"
+          className="cursor-pointer"
+        >
+          <Icons.github className="h-6 w-6" />
+        </Link>
+      </div>
     </nav>
   );
 };
