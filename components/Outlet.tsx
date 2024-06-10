@@ -17,17 +17,17 @@ const Header: FC<HeaderProps> = () => {
         <h1 className="text-lg md:text-3xl w-full md:w-24 cursor-none font-medium">
           Bhaumik Singh
         </h1>
-        <ul className="md:flex gap-x-4 cursor-pointer text-foreground transition-all duration-300 ease-in-out hidden">
-          <li className="py-1 px-4 rounded-3xl capitalize font-sans font-light hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
+        <ul className="md:flex gap-x-4 cursor-pointer text-sm text-foreground transition-all duration-300 ease-in-out hidden">
+          <li className="py-1 px-10 border rounded-3xl capitalize font-sans font-normal hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
             <Link href="#about">About</Link>
           </li>
-          <li className="py-1 px-4 rounded-3xl capitalize font-sans font-light hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
+          <li className="py-1 px-10 border rounded-3xl capitalize font-sans font-normal hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
             <Link href="#project">Project</Link>
           </li>
-          <li className="py-1 px-4 rounded-3xl capitalize font-sans font-light hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
+          <li className="py-1 px-10 border rounded-3xl capitalize font-sans font-normal hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
             <Link href="#article">Article</Link>
           </li>
-          <li className="py-1 px-4 rounded-3xl capitalize font-sans font-light hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
+          <li className="py-1 px-10 border rounded-3xl capitalize font-sans font-normal hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
             <Link href="#contact">Contact</Link>
           </li>
         </ul>
@@ -47,22 +47,18 @@ interface FooterProps {}
 const Footer: FC<FooterProps> = () => {
   return (
     <footer>
-      <div className="flex flex-col-reverse md:flex-row gap-8">
-        <div className="font-mono font-semibold space-y-8 pl-10 ">
+      <div className="flex flex-col-reverse md:flex-row md:items-start items-center gap-8">
+        <div className="font-mono font-semibold space-y-8 md:pl-10">
           <div>
-            <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl">
-              Bhaumik
-            </h2>
+            <h2 className="text-7xl sm:text-8xl lg:text-9xl">Bhaumik</h2>
           </div>
-          <div className="flex gap-x-10 md:gap-x-20 lg:gap-x-32 items-center">
-            <p className="font-sans font-normal text-shade tracking-wider text-sm md:text-lg">
+          <div className="flex gap-x-14 sm:gap-x-20 md:gap-x-28 lg:gap-x-32 items-center">
+            <p className="font-sans font-normal text-shade tracking-wider text-md md:text-lg">
               Full-stack
               <br />
               developer
             </p>
-            <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl">
-              Singh
-            </h2>
+            <h2 className="text-7xl sm:text-8xl lg:text-9xl">Singh</h2>
           </div>
         </div>
         <div className="text-left flex flex-col items-start md:items-center space-y-8 w-full font-sans px-8 lg:items-end">

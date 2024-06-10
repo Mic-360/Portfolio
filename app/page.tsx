@@ -2,6 +2,7 @@ import Author from "@/components/Author";
 import Projects from "@/components/Projects";
 import WorkTable from "@/components/WorkTable";
 import BoxReveal from "@/components/magicui/box-reveal";
+import { FooterButtons } from "@/lib/constants";
 import {
   Carousel,
   CarouselContent,
@@ -9,9 +10,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { FooterButtons } from "@/lib/constants";
-import { Icons } from "@/lib/icons";
 import Link from "next/link";
+import { Icons } from "@/lib/icons";
+import Articles from "@/components/Articles";
 
 export default function Home() {
   return (
@@ -144,7 +145,7 @@ export default function Home() {
           </p>
         </div>
         <div className="flex flex-col-reverse md:flex-row gap-4 items-center">
-          <div className="text-shade font-sans md:w-7/12 space-y-4">
+          <div className="text-shade font-sans md:w-6/12 space-y-4">
             <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
               <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl bg-foreground text-accent">
                 <span className="text-lg">Front-end</span>
@@ -247,45 +248,14 @@ export default function Home() {
         <Projects />
       </section>
       {/* articles */}
-      <article>
+      <article className="pb-20 pt-10">
         <div className="flex flex-col px-8 items-end">
           <h1 className="font-mono font-semibold text-5xl md:text-7xl">
             Articles
           </h1>
         </div>
         <hr className="my-4" />
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-between items-start px-8">
-          {Array.from({ length: 6 }).map((_, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-start justify-between p-4 w-full rounded-3xl backdrop-blur-md space-y-4 backdrop-brightness-50"
-            >
-              <div className="flex flex-col items-start justify-between p-4 w-full rounded-3xl backdrop-blur-md space-y-4 backdrop-brightness-50">
-                <div className="space-y-4">
-                  <h1 className="text-foreground font-semibold text-xl font-mono">
-                    Project Name
-                  </h1>
-                  <p className="text-foreground text-xs">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Quas necessitatibus, ad, accusantium fugit vero qui enim
-                    nobis voluptates, itaque pariatur doloribus commodi.
-                  </p>
-                </div>
-                <div className="flex gap-x-2 items-center justify-center pr-8">
-                  <div className="px-4 font-normal bg-white rounded-full py-1.5 text-background italic text-xs">
-                    Read More...
-                  </div>
-                  <Link
-                    href="/about"
-                    className="bg-white p-2 rounded-full text-background"
-                  >
-                    <Icons.right className="h-4 w-4" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Articles />
       </article>
     </div>
   );

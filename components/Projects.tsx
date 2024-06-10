@@ -58,25 +58,6 @@ const Projects: FC<ProjectsProps> = () => {
               width={800}
               className="rounded-3xl object-cover"
             />
-            <div className="absolute right-0 bottom-0">
-              <div
-                style={{
-                  borderTop: "10px solid #121212",
-                  borderLeft: "10px solid #121212",
-                  borderTopLeftRadius: "1.5rem",
-                  backgroundColor: "#121212",
-                }}
-              >
-                <Image
-                  alt="GOStat"
-                  src="https://wallpaperaccess.com/full/628353.jpg"
-                  priority
-                  height={250}
-                  width={250}
-                  className="rounded-3xl object-cover"
-                />
-              </div>
-            </div>
           </div>
           <div className="relative">
             <Image
