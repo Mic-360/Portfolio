@@ -13,6 +13,7 @@ import {
 import Link from "next/link";
 import { Icons } from "@/lib/icons";
 import Articles from "@/components/Articles";
+import RadialGradient from "@/components/magicui/radial-gradient";
 
 export default function Home() {
   return (
@@ -89,7 +90,7 @@ export default function Home() {
         <Carousel>
           <CarouselContent>
             {Array.from({ length: 6 }).map((_, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="relative md:basis-1/2 lg:basis-1/3">
                 <div
                   className="flex flex-row-reverse border-2 w-full h-60 rounded-3xl"
                   style={{
@@ -128,6 +129,7 @@ export default function Home() {
           </CarouselContent>
           <CarouselPrevious className="backdrop-blur-lg bg-background" />
           <CarouselNext className="backdrop-blur-lg bg-background" />
+          <RadialGradient />
         </Carousel>
       </section>
       {/* About me */}

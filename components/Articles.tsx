@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import Link from "next/link";
 import { Icons } from "@/lib/icons";
+import RadialGradient from "./magicui/radial-gradient";
 
 interface ArticlesProps {}
 
@@ -33,7 +34,10 @@ const Articles: FC<ArticlesProps> = () => {
           <Carousel>
             <CarouselContent>
               {Array.from({ length: 6 }).map((_, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem
+                  key={index}
+                  className="relative md:basis-1/2 lg:basis-1/3"
+                >
                   <div
                     key={index}
                     className="flex items-center justify-center p-4 w-full rounded-3xl backdrop-blur-md space-y-10 backdrop-brightness-50 h-60"
@@ -68,6 +72,7 @@ const Articles: FC<ArticlesProps> = () => {
             </CarouselContent>
             <CarouselPrevious className="backdrop-blur-lg bg-background" />
             <CarouselNext className="backdrop-blur-lg bg-background" />
+            <RadialGradient />
           </Carousel>
         </section>
       ) : (
