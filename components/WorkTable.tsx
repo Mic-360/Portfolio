@@ -12,10 +12,10 @@ const WorkTable: FC<WorkTableProps> = () => {
     const mediaQuery = window.matchMedia("(max-width: 768px)"); // Adjust breakpoint as needed
     const handleResize = () => setIsSmallScreen(mediaQuery.matches);
 
-    mediaQuery.addListener(handleResize);
+    mediaQuery.addEventListener("change", handleResize);
     handleResize(); // Check initial state
 
-    return () => mediaQuery.removeListener(handleResize);
+    return () => mediaQuery.removeEventListener("change", handleResize);
   }, []);
   return (
     <table className="table-auto w-full">

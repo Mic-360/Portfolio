@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/carousel";
 import { FooterButtons } from "@/lib/constants";
 import { Icons } from "@/lib/icons";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {

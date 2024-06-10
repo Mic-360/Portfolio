@@ -5,18 +5,19 @@ import { useEffect, useState, type FC } from "react";
 
 interface AuthorProps {}
 
-const Author: FC<AuthorProps> = ({}) => {
+const Author: FC<AuthorProps> = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)"); // Adjust breakpoint as needed
     const handleResize = () => setIsSmallScreen(mediaQuery.matches);
 
-    mediaQuery.addListener(handleResize);
+    mediaQuery.addEventListener("change", handleResize);
     handleResize(); // Check initial state
 
-    return () => mediaQuery.removeListener(handleResize);
+    return () => mediaQuery.removeEventListener("change", handleResize);
   }, []);
+
   return (
     <>
       {isSmallScreen ? (
@@ -97,4 +98,5 @@ const Author: FC<AuthorProps> = ({}) => {
     </>
   );
 };
+
 export default Author;
