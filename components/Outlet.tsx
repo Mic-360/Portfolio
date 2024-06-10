@@ -52,7 +52,7 @@ const Footer: FC<FooterProps> = () => {
           <div>
             <h2 className="text-7xl sm:text-8xl lg:text-9xl">Bhaumik</h2>
           </div>
-          <div className="flex gap-x-14 sm:gap-x-20 md:gap-x-28 lg:gap-x-32 items-center">
+          <div className="flex gap-x-14 sm:gap-x-20 md:gap-x-28 lg:gap-x-44 items-center">
             <p className="font-sans font-normal text-shade tracking-wider text-md md:text-lg">
               Full-stack
               <br />
