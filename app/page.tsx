@@ -1,3 +1,4 @@
+import Author from "@/components/Author";
 import Projects from "@/components/Projects";
 import WorkTable from "@/components/WorkTable";
 import BoxReveal from "@/components/magicui/box-reveal";
@@ -156,13 +157,13 @@ export default function Home() {
             </BoxReveal>
             <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
               <h3 className="flex justify-between items-center gap-x-8">
-                <p className="flex flex-col gap-y-2 w-1/2 border rounded-3xl px-4 py-2.5">
+                <p className="flex flex-col gap-y-2 w-full border rounded-3xl px-4 py-2.5">
                   <span className="text-lg">Styles</span>
                   <span className="font-mono">
                     SCSS / SASS / PostCSS / Ant. d / Material UI
                   </span>
                 </p>
-                <div className="w-1/2 flex justify-center">
+                <div className="w-full flex justify-center">
                   <Link
                     href={"/"}
                     className="flex items-center justify-center -space-x-4 w-fit"
@@ -199,68 +200,7 @@ export default function Home() {
               </h3>
             </article>
           </div>
-          <div className="grid grid-cols-2 grid-rows-4 sm:grid-rows-3 sm:grid-cols-3 gap-4 md:w-1/2 p-2">
-            <div className="relative h-40">
-              <Image
-                alt="Me speaking on stage at React Summit about the future of Next.js"
-                src="https://wallpaperaccess.com/full/628353.jpg"
-                fill
-                sizes="(max-width: 768px) 213px, 33vw"
-                priority
-                className="rounded-lg object-cover"
-              />
-            </div>
-            <div className="relative sm:row-span-2 row-span-1">
-              <Image
-                alt="Me standing on stage at Reactathon delivering the keynote"
-                src="https://wallpaperaccess.com/full/628353.jpg"
-                fill
-                sizes="(max-width: 768px) 213px, 33vw"
-                priority
-                className="rounded-lg object-cover object-top sm:object-center"
-              />
-            </div>
-            <div className="relative">
-              <Image
-                alt="Me and Guillermo Rauch on stage for Vercel Ship, answering questions from the Next.js community"
-                src="https://wallpaperaccess.com/full/628353.jpg"
-                fill
-                sizes="(max-width: 768px) 213px, 33vw"
-                priority
-                className="rounded-lg object-cover"
-              />
-            </div>
-            <div className="relative row-span-2">
-              <Image
-                alt="Me, Lydia, and Delba filming the Next.js Conf keynote"
-                src="https://wallpaperaccess.com/full/628353.jpg"
-                fill
-                sizes="(max-width: 768px) 213px, 33vw"
-                priority
-                className="rounded-lg object-cover sm:object-center"
-              />
-            </div>
-            <div className="relative row-span-2">
-              <Image
-                alt="My badge on top of a pile of badges from a Vercel meetup we held"
-                src="https://wallpaperaccess.com/full/628353.jpg"
-                fill
-                sizes="(max-width: 768px) 213px, 33vw"
-                priority
-                className="rounded-lg object-cover"
-              />
-            </div>
-            <div className="relative h-40">
-              <Image
-                alt="Me standing on stage at SmashingConf giving a talk about my optimism for the web"
-                src="https://wallpaperaccess.com/full/628353.jpg"
-                fill
-                sizes="(max-width: 768px) 213px, 33vw"
-                priority
-                className="rounded-lg object-cover"
-              />
-            </div>
-          </div>
+          <Author />
         </div>
       </main>
       {/* work */}
@@ -307,6 +247,47 @@ export default function Home() {
         <Projects />
         <Projects />
       </section>
+      {/* articles */}
+      <article>
+        <div className="flex flex-col px-8 items-end">
+          <h1 className="font-mono font-semibold text-5xl md:text-7xl">
+            Articles
+          </h1>
+        </div>
+        <hr className="my-4" />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 justify-between items-start px-8">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-start justify-between p-4 w-full rounded-3xl backdrop-blur-md space-y-4 backdrop-brightness-50"
+            >
+              <div className="flex flex-col items-start justify-between p-4 w-full rounded-3xl backdrop-blur-md space-y-4 backdrop-brightness-50">
+                <div className="space-y-4">
+                  <h1 className="text-foreground font-semibold text-xl font-mono">
+                    Project Name
+                  </h1>
+                  <p className="text-foreground text-xs">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Quas necessitatibus, ad, accusantium fugit vero qui enim
+                    nobis voluptates, itaque pariatur doloribus commodi.
+                  </p>
+                </div>
+                <div className="flex gap-x-2 items-center justify-center pr-8">
+                  <div className="px-4 font-normal bg-white rounded-full py-1.5 text-background italic text-xs">
+                    Read More...
+                  </div>
+                  <Link
+                    href="/about"
+                    className="bg-white p-2 rounded-full text-background"
+                  >
+                    <Icons.right className="h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </article>
     </div>
   );
 }
