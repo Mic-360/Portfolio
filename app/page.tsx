@@ -34,13 +34,13 @@ export default function Home() {
             </BoxReveal>
             <div className="hidden md:flex gap-x-2 items-center justify-center pr-10 animate-fade-in">
               <div className="px-20 font-normal bg-foreground rounded-full py-1.5 text-background italic">
-                Projects
+                Resume...
               </div>
               <Link
-                href="#project"
+                href="/R_resume.pdf"
                 className="bg-foreground p-2 rounded-full text-background"
               >
-                <Icons.right className="h-4 w-4" />
+                <Icons.right className="h-4 w-4 rotate-90" />
               </Link>
             </div>
           </div>
@@ -160,7 +160,7 @@ export default function Home() {
               <span className="text-foreground italic">Bhaumik</span>, I&apos;m
               a full-stack developer.
               <br /> More than{" "}
-              <span className="text-foreground italic">5 years</span>{" "}
+              <span className="text-foreground italic">4 years</span>{" "}
               experience.
             </p>
           </div>

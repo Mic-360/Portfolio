@@ -32,7 +32,7 @@ const Header: FC<HeaderProps> = () => {
           </li>
         </ul>
         <Link
-          href="https://github.com/Mic-360/portfolio"
+          href="https://github.com/Mic-360"
           className="cursor-pointer"
         >
           <Icons.github className="h-6 w-6" />
@@ -67,7 +67,7 @@ const Footer: FC<FooterProps> = () => {
           </h2>
           <ul className="flex gap-x-8 cursor-pointer transition-all duration-300 ease-in-out">
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
-              <Link href="/R_resume.pdf">Resume</Link>
+              <Link href="#typeform">Connect form</Link>
             </li>
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
               <Link href="#about">About</Link>
@@ -76,10 +76,10 @@ const Footer: FC<FooterProps> = () => {
               <Link href="#project">Projects</Link>
             </li>
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
-              <Link href="#article">Game</Link>
+              <Link href="https://github.com/Mic-360/portfolio">Source Code</Link>
             </li>
           </ul>
-          <div className="w-72">
+          <div className="w-96">
             <div className="border border-accent rounded-3xl p-4 space-y-2 text-shade font-mono relative">
               <ShineBorder
                 borderRadius={22}

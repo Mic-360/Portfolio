@@ -9,7 +9,7 @@ const Author: FC<AuthorProps> = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)"); // Adjust breakpoint as needed
+    const mediaQuery = window.matchMedia("(max-width: 868px)"); // Adjust breakpoint as needed
     const handleResize = () => setIsSmallScreen(mediaQuery.matches);
 
     mediaQuery.addEventListener("change", handleResize);
@@ -23,8 +23,8 @@ const Author: FC<AuthorProps> = () => {
       {isSmallScreen ? (
         <div className="mb-10">
           <Image
-            alt="Me speaking on stage at React Summit about the future of Next.js"
-            src="https://wallpaperaccess.com/full/628353.jpg"
+            alt="Me at Airtel 5G launch event"
+            src="/airtel5G.jpg"
             priority
             width={800}
             height={800}
@@ -32,11 +32,11 @@ const Author: FC<AuthorProps> = () => {
           />
         </div>
       ) : (
-        <div className="grid grid-cols-2 grid-rows-4 sm:grid-rows-3 sm:grid-cols-3 gap-4 md:w-1/2 p-2">
+        <div className="grid grid-cols-2 grid-rows-4 sm:grid-rows-3 sm:grid-cols-3 gap-4 md:w-1/2 lg:w-2/3 p-2">
           <div className="relative h-40">
             <Image
-              alt="Me speaking on stage at React Summit about the future of Next.js"
-              src="https://wallpaperaccess.com/full/628353.jpg"
+              alt="Google Devfest Bhubaneshwar 2023"
+              src="https://media.licdn.com/dms/image/D4D22AQFJBOC92qYENw/feedshare-shrink_1280/0/1670766067189?e=1721865600&v=beta&t=JUieywP-QEycFBORnycLTpUdo38b2MnsCJTPSsxYiuU"
               fill
               sizes="(max-width: 768px) 213px, 33vw"
               priority
@@ -45,8 +45,8 @@ const Author: FC<AuthorProps> = () => {
           </div>
           <div className="relative sm:row-span-2 row-span-1">
             <Image
-              alt="Me standing on stage at Reactathon delivering the keynote"
-              src="https://wallpaperaccess.com/full/628353.jpg"
+              alt="National Startup Awards 2023"
+              src="https://media.licdn.com/dms/image/D5622AQF6uu_wMGp7ig/feedshare-shrink_800/0/1705840308457?e=1721865600&v=beta&t=KDvn1KpdeLY1zZ8_PzjJCICv8qcV42GmtrBpEg_gwBw"
               fill
               sizes="(max-width: 468px) 213px, 33vw"
               priority
@@ -55,8 +55,8 @@ const Author: FC<AuthorProps> = () => {
           </div>
           <div className="relative">
             <Image
-              alt="Me and Guillermo Rauch on stage for Vercel Ship, answering questions from the Next.js community"
-              src="https://wallpaperaccess.com/full/628353.jpg"
+              alt="At Soa Campus after winning the best startup award"
+              src="/award winnin.png"
               fill
               sizes="(max-width: 768px) 213px, 33vw"
               priority
@@ -65,8 +65,8 @@ const Author: FC<AuthorProps> = () => {
           </div>
           <div className="relative row-span-2">
             <Image
-              alt="Me, Lydia, and Delba filming the Next.js Conf keynote"
-              src="https://wallpaperaccess.com/full/628353.jpg"
+              alt="Soa University Node Red Workshop"
+              src="https://media.licdn.com/dms/image/C4D22AQFJi7tziSD-Ew/feedshare-shrink_1280/0/1673895349913?e=1721865600&v=beta&t=ut0BZV8L51nAr6tnkDzHTPrWR5Kk77zgQUykrl6KQ0k"
               fill
               sizes="(max-width: 768px) 213px, 33vw"
               priority
@@ -75,8 +75,8 @@ const Author: FC<AuthorProps> = () => {
           </div>
           <div className="relative row-span-2">
             <Image
-              alt="My badge on top of a pile of badges from a Vercel meetup we held"
-              src="https://wallpaperaccess.com/full/628353.jpg"
+              alt="Me standing on stage at Azure DevDay giving a talk about Github Actions"
+              src="/speaker.jpg"
               fill
               sizes="(max-width: 768px) 213px, 33vw"
               priority
@@ -85,8 +85,8 @@ const Author: FC<AuthorProps> = () => {
           </div>
           <div className="relative h-40">
             <Image
-              alt="Me standing on stage at SmashingConf giving a talk about my optimism for the web"
-              src="https://wallpaperaccess.com/full/628353.jpg"
+              alt="Explaining concepts of Node Red to students at Soa University"
+              src="https://media.licdn.com/dms/image/C4D22AQHvCDdeFLDWKg/feedshare-shrink_1280/0/1673895350162?e=1721865600&v=beta&t=oOIX38D-tAwf9-EucsCcP4ySmiLGrGKoR1iLBCm41Jw"
               fill
               sizes="(max-width: 768px) 213px, 33vw"
               priority
