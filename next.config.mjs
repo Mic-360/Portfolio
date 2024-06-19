@@ -8,6 +8,9 @@ const nextConfig = {
       {
         hostname: "wallpaperaccess.com",
       },
+      {
+        hostname: "avatar.vercel.sh",
+      },
     ],
   },
 };

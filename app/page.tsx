@@ -17,6 +17,7 @@ import RadialGradient from "@/components/magicui/radial-gradient";
 import DotPattern from "@/components/magicui/dot-pattern";
 import { cn } from "@/lib/utils";
 import AnimatedGridPattern from "@/components/magicui/animated-grid";
+import Particles from "@/components/magicui/particles";
 
 export default function Home() {
   return (
@@ -81,7 +82,7 @@ export default function Home() {
                   <Link
                     key={idx}
                     href={button.link}
-                    className={`flex items-center justify-center py-2 px-4 gap-x-4 rounded-3xl border border-accent capitalize text-shade font-sans font-semibold hover:bg-accent hover:text-foreground transition-all duration-300 ease-in-out ${idx === 3 ? "lg:mx-20" : ""}`}
+                    className={`flex items-center justify-center py-2 px-4 gap-x-4 rounded-3xl border border-accent capitalize text-shade font-sans font-semibold hover:bg-accent hover:text-foreground transition-all duration-300 ease-in-out ${idx === 3 ? "lg:mx-20 bg-black/50" : ""}`}
                   >
                     <span className="text-foreground">{button.icon}</span>
                     {button.name}
@@ -119,7 +120,7 @@ export default function Home() {
                           commodi.
                         </p>
                       </div>
-                      <div className="flex gap-x-2 items-center justify-center pr-8">
+                      <div className="flex gap-x-2 items-center justify-center pr-6">
                         <div className="px-4 font-normal bg-white rounded-full py-1.5 text-background italic text-xs">
                           Read More...
                         </div>
@@ -290,14 +291,12 @@ export default function Home() {
         </div>
         <hr className="my-4" />
         <Articles />
-        <AnimatedGridPattern
-          numSquares={30}
-          maxOpacity={0.5}
-          duration={3}
-          className={cn(
-            "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]",
-            "inset-x-0 inset-y-[-30%] h-[180%] skew-y-12 -z-10 blur-[0.7px]"
-          )}
+        <Particles
+          className="absolute inset-0 -z-10"
+          quantity={50}
+          ease={8}
+          color={"#ffffff"}
+          refresh
         />
       </article>
     </div>
