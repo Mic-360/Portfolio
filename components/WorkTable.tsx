@@ -35,7 +35,7 @@ const WorkTable: FC<WorkTableProps> = () => {
                 <td className="p-4 w-1/2">
                   <p>{work.Company}</p>
                   <p>
-                    {work.Role} {work.Skills}
+                    {work.Role} | {work.Skills}
                   </p>
                 </td>
               </>
@@ -49,7 +49,7 @@ const WorkTable: FC<WorkTableProps> = () => {
                 <td className="pl-14 p-4">{work.Company}</td>
                 <td className="pl-14 p-4">
                   <p>
-                    {work.Role} {work.Skills}
+                    {work.Role} | {work.Skills}
                   </p>
                 </td>
               </>

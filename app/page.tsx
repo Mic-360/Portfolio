@@ -36,7 +36,7 @@ export default function Home() {
                 Projects
               </div>
               <Link
-                href="/about"
+                href="#project"
                 className="bg-foreground p-2 rounded-full text-background"
               >
                 <Icons.right className="h-4 w-4" />
@@ -147,7 +147,7 @@ export default function Home() {
         />
       </div>
       {/* Intro to work and about */}
-      <div className="relative">
+      <div id="about" className="relative">
         {/* About me */}
         <main className="px-8">
           <div className="flex flex-col md:flex-row gap-4 justify-between items-start my-20">
@@ -248,9 +248,9 @@ export default function Home() {
           <div className="flex px-8 mb-8 py-4 justify-end items-end">
             <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
               <p className="text-shade text-sm w-full text-right">
-                <span className="text-shade">Work Experience</span>
-                <br />
                 <span className="text-foreground italic">4 years 9 months</span>
+                <br />
+                <span className="text-shade">Professional Work Experience</span>
               </p>
             </BoxReveal>
           </div>
@@ -266,7 +266,7 @@ export default function Home() {
         />
       </div>
       {/* projects */}
-      <section className="relative px-10">
+      <section id="project" className="relative px-10">
         <div className="flex justify-center items-center my-10">
           <h2 className="text-foreground text-xl font-medium font-mono">
             .../Projects...
@@ -277,12 +277,12 @@ export default function Home() {
         <Projects />
         <DotPattern
           className={cn(
-            "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] -z-10 blur-[0.5px]"
+            "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] -z-10 blur-[0.5px]"
           )}
         />
       </section>
       {/* articles */}
-      <article className="relative pb-20 pt-10">
+      <article id="article" className="relative pb-20 pt-10">
         <div className="flex flex-col px-8 items-end">
           <h1 className="font-mono font-semibold text-5xl md:text-7xl">
             Articles

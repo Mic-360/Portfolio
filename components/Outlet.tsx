@@ -46,7 +46,7 @@ interface FooterProps {}
 
 const Footer: FC<FooterProps> = () => {
   return (
-    <footer>
+    <footer id="contact">
       <div className="flex flex-col-reverse md:flex-row md:items-start items-center gap-8">
         <div className="font-mono font-semibold space-y-8 md:pl-10">
           <div>
@@ -67,16 +67,16 @@ const Footer: FC<FooterProps> = () => {
           </h2>
           <ul className="flex gap-x-8 cursor-pointer transition-all duration-300 ease-in-out">
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
-              Connect
+              <Link href="/R_resume.pdf">Resume</Link>
             </li>
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
-              About
+              <Link href="#about">About</Link>
             </li>
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
-              Projects
+              <Link href="#project">Projects</Link>
             </li>
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
-              Articles
+              <Link href="#article">Game</Link>
             </li>
           </ul>
           <div className="w-72">
@@ -85,10 +85,10 @@ const Footer: FC<FooterProps> = () => {
                 borderRadius={22}
                 color={["#f5f5f5", "#a6a6a6", "#3d3d3d"]}
               >
-                <p className="text-xl mb-2 font-sans">Copyright</p>
-                <p className="text-sm">2024 - 2025 /</p>
-                <p className="text-sm">Bhaumik Singh /</p>
-                <p className="text-sm">All Rights Reserved /</p>
+                <p className="text-xl mb-2">2024 - 2025</p>
+                <p className="text-sm">Handcrafted by bhaumic /</p>
+                <p className="text-sm">Designed by Taisia /</p>
+                <p className="text-sm">Powered by NextJs & Vercel</p>
               </ShineBorder>
             </div>
           </div>
