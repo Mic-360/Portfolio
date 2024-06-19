@@ -10,12 +10,8 @@ const secondRow = Array.from({ length: 8 - 2 });
 
 const ArticleCard = () => {
   return (
-    <figure
-      className="w-96"
-    >
-      <div
-        className="flex flex-col items-start justify-between p-4 w-full rounded-3xl backdrop-blur-md space-y-4 backdrop-brightness-50 border border-accent"
-      >
+    <figure className="w-96">
+      <div className="flex flex-col items-start justify-between p-4 w-full rounded-3xl backdrop-blur-md space-y-4 backdrop-brightness-50 border border-accent">
         <div className="flex flex-col items-start justify-between p-4 w-full rounded-3xl backdrop-blur-md space-y-4 backdrop-brightness-50">
           <div className="space-y-4">
             <h1 className="text-foreground font-semibold text-xl font-mono">
@@ -43,7 +39,6 @@ const ArticleCard = () => {
     </figure>
   );
 };
-
 
 const Articles: FC<ArticlesProps> = () => {
   return (

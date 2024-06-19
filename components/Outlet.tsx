@@ -31,10 +31,7 @@ const Header: FC<HeaderProps> = () => {
             <Link href="#contact">Contact</Link>
           </li>
         </ul>
-        <Link
-          href="https://github.com/Mic-360"
-          className="cursor-pointer"
-        >
+        <Link href="https://github.com/Mic-360" className="cursor-pointer">
           <Icons.github className="h-6 w-6" />
         </Link>
       </div>
@@ -76,7 +73,9 @@ const Footer: FC<FooterProps> = () => {
               <Link href="#project">Projects</Link>
             </li>
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
-              <Link href="https://github.com/Mic-360/portfolio">Source Code</Link>
+              <Link href="https://github.com/Mic-360/portfolio">
+                Source Code
+              </Link>
             </li>
           </ul>
           <div className="w-96">
