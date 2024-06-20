@@ -16,8 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://bhaumic.me/"),
   title: {
     default: "Bhaumic Singh",
-    separator: " | ",
-    site: "bhaumic.me",
+    template: "%s | Bhaumic Singh",
   },
   description: "Curious Web and Android Developer.",
   openGraph: {
@@ -35,11 +34,6 @@ export const metadata: Metadata = {
         alt: "Bhaumic Singh",
       },
     ],
-  },
-  twitter: {
-    handle: "@bhaumicme",
-    site: "@bhaumicme",
-    cardType: "summary_large_image",
   },
   robots: {
     index: true,
