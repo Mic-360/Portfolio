@@ -1,4 +1,4 @@
-import { FooterButton, Work } from "@/types/types";
+import { Feed, FooterButton, Work } from "@/types/types";
 import { Icons } from "./icons";
 
 export const FooterButtons: FooterButton[] = [
@@ -55,5 +55,43 @@ export const WorkExperience: Work[] = [
     Duration: "1 year 9 months",
     Role: "Android & Web Developer",
     Skills: "Git, Java, Kotlin, PHP, MySQL, HTML, CSS, JS",
+  },
+];
+
+export const feeds: Feed[] = [
+  {
+    title: "completion-certificate-for-sound-the-alarm",
+    id: "7200124502058414080",
+    description: "completion-certificate-for-sound-the-alarm",
+  },
+  {
+    title: "reactcompiler-webdevelopment-reactjs",
+    id: "7196630280365817856",
+    description: "reactcompiler-webdevelopment-reactjs",
+  },
+  {
+    title: "cloudready-facilitator-program-2022",
+    id: "6952277499670061056",
+    description: "cloudready-facilitator-program-2022",
+  },
+  {
+    title: "completion-certificate-for-linux-and-sql",
+    id: "7176528843736801281",
+    description: "completion-certificate-for-linux-and-sql",
+  },
+  {
+    title: "github-opensource-contribution",
+    id: "7154112397652193281",
+    description: "github-opensource-contribution",
+  },
+  {
+    title: "linuxkernel-opensource-techinnovation",
+    id: "7150885843967033344",
+    description: "linuxkernel-opensource-techinnovation",
+  },
+  {
+    title: "newbeginnings-leadership-innovation",
+    id: "7118668557822943232",
+    description: "newbeginnings-leadership-innovation",
   },
 ];

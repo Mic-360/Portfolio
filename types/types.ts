@@ -13,3 +13,9 @@ export type Work = {
   Role: string;
   Skills: string;
 };
+
+export type Feed = {
+  title: string;
+  id: string;
+  description: string;
+};

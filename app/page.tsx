@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/carousel";
 import Link from "next/link";
 import { Icons } from "@/lib/icons";
-import Articles from "@/components/Articles";
+import Feeds from "@/components/Feed";
 import RadialGradient from "@/components/magicui/radial-gradient";
 import DotPattern from "@/components/magicui/dot-pattern";
 import { cn } from "@/lib/utils";
@@ -285,12 +285,26 @@ export default function Home() {
       {/* articles */}
       <article id="article" className="relative pb-20 pt-10">
         <div className="flex flex-col px-8 items-end">
-          <h1 className="font-mono font-semibold text-5xl md:text-7xl">
-            Articles
+          <h1 className="flex items-baseline justify-center  gap-x-2 font-mono font-semibold text-4xl md:text-6xl">
+            <span>Feed</span>{" "}
+            <span>
+              <svg
+                width="60px"
+                height="60px"
+                viewBox="-10 -5 1034 1034"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+              >
+                <path
+                  fill="#ffffff"
+                  d="M75 175v170q135 0 260 52t220.5 147.5t147.5 220.5t52 260h170q0 -169 -64.5 -325t-184.5 -275.5t-276 -184.5t-325 -65zM75 462v165q79 0 152.5 30.5t129.5 86.5t86 129t30 152h165q0 -112 -42.5 -215.5t-122 -182.5t-183 -122t-215.5 -43zM192 792q-32 0 -59 16 t-42.5 42.5t-15.5 58.5t15.5 58.5t42.5 42t58.5 15.5t58.5 -15.5t42.5 -42t15.5 -58.5t-15.5 -58.5t-42.5 -42.5t-58 -16z"
+                />
+              </svg>
+            </span>
           </h1>
         </div>
         <hr className="my-4" />
-        <Articles />
+        <Feeds />
         <Particles
           className="absolute inset-0 -z-10"
           quantity={50}
