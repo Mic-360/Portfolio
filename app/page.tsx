@@ -167,8 +167,8 @@ export default function Home() {
           <div className="flex flex-col-reverse md:flex-row gap-4 items-center">
             <div className="text-shade font-sans md:w-6/12 space-y-4">
               <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
-                <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl bg-foreground text-accent">
-                  <span className="text-lg">Front-end</span>
+                <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl highlight bg-black/20 border">
+                  <span className="text-xl font-semibold">Front-end</span>
                   <span className="font-mono text-sm">
                     TypeScript / React / Vue / Vuex / Redux Toolkit / Next Js /
                     Nuxt / Jest / GraphQL / React Native / Puppeteer
@@ -177,8 +177,8 @@ export default function Home() {
               </BoxReveal>
               <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
                 <h3 className="flex justify-between items-center gap-x-8">
-                  <p className="flex flex-col gap-y-2 w-full border rounded-3xl px-4 py-2.5">
-                    <span className="text-lg">Styles</span>
+                  <p className="flex flex-col gap-y-2 w-full border rounded-3xl px-4 py-2.5 highlight bg-black/20">
+                    <span className="text-xl font-semibold">Styles</span>
                     <span className="font-mono">
                       SCSS / SASS / PostCSS / Ant. d / Material UI
                     </span>
@@ -195,8 +195,8 @@ export default function Home() {
                 </h3>
               </BoxReveal>
               <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
-                <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl border border-shade">
-                  <span className="text-lg">Back-end</span>
+                <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl border border-shade highlight bg-black/20">
+                  <span className="text-xl font-semibold">Back-end</span>
                   <span className="font-mono text-sm">
                     Golang / Gin / GORM / PostgreSQL / MySQL / MongoDB / gRPC /
                     Redis / Kafka / Node / Nest / TypeORM / Microservices
@@ -212,8 +212,8 @@ export default function Home() {
                   </span>{" "}
                   that I worked with.
                 </p>
-                <h3 className="border border-shade rounded-3xl py-2.5 px-4 space-y-2">
-                  <p className="text-lg">DevOps</p>
+                <h3 className="border border-shade rounded-3xl py-2.5 px-4 space-y-2 highlight bg-black/20">
+                  <p className="text-xl font-semibold">DevOps</p>
                   <p className="font-mono">
                     Nginx / Brotli / Docker /<br /> (CI / CD) / k8s / bash
                   </p>
@@ -282,8 +282,8 @@ export default function Home() {
           )}
         />
       </section>
-      {/* articles */}
-      <article id="article" className="relative pb-20 pt-10">
+      {/* feed */}
+      <main id="feed" className="relative pb-20 pt-10">
         <div className="flex flex-col px-8 items-end">
           <h1 className="flex items-baseline justify-center  gap-x-2 font-mono font-semibold text-4xl md:text-6xl">
             <span>Feed</span>{" "}
@@ -312,7 +312,7 @@ export default function Home() {
           color={"#ffffff"}
           refresh
         />
-      </article>
+      </main>
     </div>
   );
 }

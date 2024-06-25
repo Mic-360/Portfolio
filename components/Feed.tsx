@@ -11,13 +11,13 @@ const secondRow = feeds.slice(feeds.length / 2);
 const ArticleCard = ({ title, description, id }: Feed) => {
   return (
     <figure>
-      <div className="flex flex-col items-start justify-between w-full rounded-md backdrop-blur-md space-y-4 backdrop-brightness-50 border border-accent">
+      <div className="flex flex-col items-start justify-between w-full h-96 rounded-md backdrop-blur-md space-y-4 backdrop-brightness-50 border border-accent">
         <iframe
           src={`https://www.linkedin.com/embed/feed/update/urn:li:share:${id}`}
           allowFullScreen
           title={title}
           aria-label={description}
-          className="w-full h-[23rem] rounded-md bg-transparent"
+          className="w-full h-full md:w-[26rem] lg:w-[30rem] rounded-md"
         />
       </div>
     </figure>

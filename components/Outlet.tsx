@@ -58,13 +58,13 @@ const Footer: FC<FooterProps> = () => {
             <h2 className="text-7xl sm:text-8xl lg:text-9xl">Singh</h2>
           </div>
         </div>
-        <div className="text-left flex flex-col items-start md:items-center space-y-8 w-full font-sans px-8 lg:items-end">
-          <h2 className="text-xl font-medium font-mono w-72">
+        <div className="text-left flex flex-col items-center space-y-8 w-full font-sans px-10 lg:items-end">
+          <h2 className="text-xl font-medium font-mono w-full text-center">
             .../Contacts...
           </h2>
           <ul className="flex gap-x-8 cursor-pointer transition-all duration-300 ease-in-out">
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
-              <Link href="#typeform">Connect form</Link>
+              <Link href="#typeform">Connect</Link>
             </li>
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
               <Link href="#about">About</Link>
@@ -74,11 +74,11 @@ const Footer: FC<FooterProps> = () => {
             </li>
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
               <Link href="https://github.com/Mic-360/portfolio">
-                Source Code
+                Source
               </Link>
             </li>
           </ul>
-          <div className="w-96">
+          <div className="w-72">
             <div className="border border-accent rounded-3xl p-4 space-y-2 text-shade font-mono relative">
               <ShineBorder
                 borderRadius={22}
