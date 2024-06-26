@@ -1,8 +1,12 @@
 import Author from "@/components/Author";
+import Feeds from "@/components/Feed";
 import Projects from "@/components/Projects";
 import WorkTable from "@/components/WorkTable";
+import AnimatedGridPattern from "@/components/magicui/animated-grid";
 import BoxReveal from "@/components/magicui/box-reveal";
-import { FooterButtons } from "@/lib/constants";
+import DotPattern from "@/components/magicui/dot-pattern";
+import Particles from "@/components/magicui/particles";
+import RadialGradient from "@/components/magicui/radial-gradient";
 import {
   Carousel,
   CarouselContent,
@@ -10,14 +14,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Link from "next/link";
+import { FooterButtons } from "@/lib/constants";
 import { Icons } from "@/lib/icons";
-import Feeds from "@/components/Feed";
-import RadialGradient from "@/components/magicui/radial-gradient";
-import DotPattern from "@/components/magicui/dot-pattern";
 import { cn } from "@/lib/utils";
-import AnimatedGridPattern from "@/components/magicui/animated-grid";
-import Particles from "@/components/magicui/particles";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -157,7 +157,7 @@ export default function Home() {
             </h2>
             <p className="text-shade w-full">
               Hello! I&apos;m{" "}
-              <span className="text-foreground italic">Bhaumik</span>, I&apos;m
+              <span className="text-foreground italic">Bhaumic</span>, I&apos;m
               a full-stack developer.
               <br /> More than{" "}
               <span className="text-foreground italic">4 years</span>{" "}
