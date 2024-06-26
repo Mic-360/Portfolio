@@ -1,7 +1,8 @@
+import { Footer, Header } from "@/components/Outlet";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Fira_Code, Open_Sans } from "next/font/google";
 import "./globals.css";
-import { Footer, Header } from "@/components/Outlet";
 
 const firaCode = Fira_Code({
   variable: "--font-fira-code",
@@ -15,15 +16,15 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://bhaumic.me/"),
   title: {
-    default: "Bhaumic Singh",
-    template: "%s | Bhaumic Singh",
+    default: "Bhaumik Singh",
+    template: "%s | Bhaumik Singh",
   },
   description: "Curious Web and Android Developer.",
   openGraph: {
-    title: "Bhaumic Singh",
+    title: "Bhaumik Singh",
     description: "Curious Web and Android Developer.",
     url: "https://bhaumic.me",
-    siteName: "Bhaumic Singh",
+    siteName: "Bhaumik Singh",
     locale: "en_US",
     type: "website",
     images: [
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
         url: "https://media.licdn.com/dms/image/C4D22AQFJi7tziSD-Ew/feedshare-shrink_1280/0/1673895349913?e=1721865600&v=beta&t=ut0BZV8L51nAr6tnkDzHTPrWR5Kk77zgQUykrl6KQ0k",
         width: 1200,
         height: 630,
-        alt: "Bhaumic Singh",
+        alt: "Bhaumik Singh",
       },
     ],
   },
@@ -59,6 +60,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
