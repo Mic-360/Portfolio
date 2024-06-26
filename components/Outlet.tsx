@@ -73,9 +73,7 @@ const Footer: FC<FooterProps> = () => {
               <Link href="#project">Projects</Link>
             </li>
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
-              <Link href="https://github.com/Mic-360/portfolio">
-                Source
-              </Link>
+              <Link href="https://github.com/Mic-360/portfolio">Source</Link>
             </li>
           </ul>
           <div className="w-72">

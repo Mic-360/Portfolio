@@ -18,7 +18,7 @@ const Projects: FC<ProjectsProps> = () => {
               href={button.link}
               className="flex items-center justify-center py-2 px-2.5 gap-x-2 rounded-3xl border border-accent text-shade font-sans font-semibold hover:bg-accent hover:text-foreground transition-all duration-300 ease-in-out text-xs"
             >
-              {button.icon}{button.name}
+              {button.name}
             </Link>
           ))}
         </div>
@@ -65,7 +65,7 @@ const Projects: FC<ProjectsProps> = () => {
               src="https://wallpaperaccess.com/full/628353.jpg"
               priority
               fill
-              className="rounded-3xl object-cover"
+              className="rounded-xl md:rounded-3xl object-cover"
             />
           </div>
         </div>
