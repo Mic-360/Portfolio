@@ -66,13 +66,13 @@ export default function Home() {
           </div>
           <div className="flex md:hidden gap-x-2 items-center justify-start animate-fade-in">
             <div className="px-20 font-normal bg-foreground rounded-full py-1.5 text-background italic">
-              Projects
+              Resume...
             </div>
             <Link
-              href="/about"
+              href="/R_resume.pdf"
               className="bg-foreground p-2 rounded-full text-background"
             >
-              <Icons.right className="h-4 w-4" />
+              <Icons.right className="h-4 w-4 rotate-90" />
             </Link>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:flex px-4 md:px-6 lg:px-8 py-8 items-start md:items-center justify-center gap-2.5">
