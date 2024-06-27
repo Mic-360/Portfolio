@@ -28,7 +28,7 @@ export default function Home() {
         <header className="space-y-4 px-8 relative">
           <div className="mt-14 flex justify-between items-center">
             <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
-              <h1 className="font-mono text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold">
+              <h1 className="font-mono text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-semibold">
                 Full-stack
               </h1>
             </BoxReveal>
@@ -55,11 +55,11 @@ export default function Home() {
                 <span className="text-foreground italic">
                   understandable code
                 </span>{" "}
-                to process development was enjoyable.
+                to make development process enjoyable.
               </p>
             </BoxReveal>
             <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
-              <h1 className="font-mono text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold pl-16 lg:pl-0">
+              <h1 className="font-mono text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-semibold pl-16 lg:pl-0">
                 Developer
               </h1>
             </BoxReveal>
@@ -82,7 +82,7 @@ export default function Home() {
                   <Link
                     key={idx}
                     href={button.link}
-                    className={`flex items-center justify-center py-2 px-4 gap-x-4 rounded-3xl border border-accent capitalize text-shade font-sans font-semibold hover:bg-accent hover:text-foreground transition-all duration-300 ease-in-out ${idx === 3 ? "lg:mx-20 bg-black/50" : ""}`}
+                    className={`flex items-center justify-center py-2 px-4 gap-x-4 rounded-3xl border border-accent capitalize text-shade font-sans font-semibold hover:bg-accent hover:text-foreground transition-all duration-300 ease-in-out bg-black/50 ${idx === 3 ? "lg:mx-20" : ""}`}
                   >
                     <span className="text-foreground">{button.icon}</span>
                     {button.name}
@@ -157,9 +157,9 @@ export default function Home() {
             </h2>
             <p className="text-shade w-full">
               Hello! I&apos;m{" "}
-              <span className="text-foreground italic">Bhaumic</span>, I&apos;m
-              a full-stack developer.
-              <br /> More than{" "}
+              <span className="text-foreground text-xl">Bhaumik</span>, a
+              full-stack developer.
+              <br /> With more than{" "}
               <span className="text-foreground italic">4 years</span>{" "}
               experience.
             </p>
@@ -305,13 +305,13 @@ export default function Home() {
         </div>
         <hr className="my-4" />
         <Feeds />
-        <Particles
+        {/* <Particles
           className="absolute inset-0 -z-10"
           quantity={50}
           ease={8}
           color={"#ffffff"}
           refresh
-        />
+        /> */}
       </main>
     </div>
   );

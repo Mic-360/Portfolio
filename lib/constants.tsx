@@ -3,7 +3,7 @@ import { Icons } from "./icons";
 
 export const FooterButtons: FooterButton[] = [
   {
-    link: "mailto:bhaumiksingh2000@gmail.com",
+    link: "mailto:developer@bhaumic.me",
     name: "e-mail",
     icon: <Icons.email className="w-[16px] h-[16px]" />,
   },

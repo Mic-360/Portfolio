@@ -1,9 +1,12 @@
+"use client";
+
 import { FooterButtons } from "@/lib/constants";
 import { Icons } from "@/lib/icons";
 import Link from "next/link";
-import type { FC } from "react";
+import { type FC } from "react";
 import Meteors from "./magicui/meteors";
 import ShineBorder from "./magicui/shine-border";
+import { PopupButton } from "@typeform/embed-react";
 
 interface HeaderProps {}
 
@@ -63,9 +66,11 @@ const Footer: FC<FooterProps> = () => {
             .../Contacts...
           </h2>
           <ul className="flex gap-x-8 cursor-pointer transition-all duration-300 ease-in-out">
-            <li className="text-shade hover:text-accent hover:underline underline-offset-2">
-              <Link href="#typeform">Connect</Link>
-            </li>
+            <PopupButton id={"woGMwFuB"}>
+              <li className="text-shade hover:text-accent hover:underline underline-offset-2">
+                <Link href="#about">Connect</Link>
+              </li>
+            </PopupButton>
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
               <Link href="#about">About</Link>
             </li>

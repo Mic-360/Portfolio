@@ -26,3 +26,15 @@ body {
   background: var(--foreground);
   color: var(--accent);
 }
+
+::-webkit-scrollbar {
+  width: 1.5px;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f5f5f5;
+}
