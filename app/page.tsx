@@ -267,7 +267,7 @@ export default function Home() {
         />
       </div>
       {/* projects */}
-      <section id="project" className="relative px-10">
+      {/* <section id="project" className="relative px-10">
         <div className="flex justify-center items-center my-10">
           <h2 className="text-foreground text-xl font-medium font-mono">
             .../Projects...
@@ -281,7 +281,7 @@ export default function Home() {
             "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] -z-10 blur-[0.5px]"
           )}
         />
-      </section>
+      </section> */}
       {/* feed */}
       <main id="feed" className="relative pb-20 pt-10">
         <div className="flex flex-col px-8 items-end">
