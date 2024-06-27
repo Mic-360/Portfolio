@@ -305,13 +305,11 @@ export default function Home() {
         </div>
         <hr className="my-4" />
         <Feeds />
-        {/* <Particles
+        <Particles
           className="absolute inset-0 -z-10"
-          quantity={50}
-          ease={8}
           color={"#ffffff"}
           refresh
-        /> */}
+        />
       </main>
     </div>
   );
