@@ -316,7 +316,6 @@ export default function Home() {
         </div>
         <Projects />
         <Projects />
-        <Projects />
         <DotPattern
           className={cn(
             "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] -z-10 blur-[0.5px]"

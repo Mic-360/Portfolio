@@ -8,7 +8,7 @@ interface ProjectsProps {}
 
 const Projects: FC<ProjectsProps> = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row gap-10 mb-20 lg:justify-between">
+    <div className="flex flex-col-reverse lg:flex-row gap-10 my-32 lg:justify-between">
       <div className="flex flex-col gap-y-8 lg:w-2/3">
         <h1 className="text-xl">GoStat</h1>
         <div className="grid grid-cols-3 gap-x-3 gap-y-2 w-4/5 sm:w-2/5 lg:w-4/5">
