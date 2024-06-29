@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/carousel";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { FooterButtons } from "@/lib/constants";
+import { content } from "@/lib/content";
 import { Icons } from "@/lib/icons";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -172,8 +173,8 @@ export default function Home() {
                 <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl highlight bg-black/20 border">
                   <span className="text-xl font-semibold">Front-end</span>
                   <span className="font-mono text-sm">
-                    TypeScript / React / Vue / Svelte / Redux / Next Js /
-                    Nuxt / Jest / GraphQL / React Native / Flutter
+                    TypeScript / React / Vue / Svelte / Redux / Next Js / Nuxt /
+                    Jest / GraphQL / React Native / Flutter
                   </span>
                 </p>
               </BoxReveal>
@@ -200,8 +201,8 @@ export default function Home() {
                 <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl border border-shade highlight bg-black/20">
                   <span className="text-xl font-semibold">Back-end</span>
                   <span className="font-mono text-sm">
-                    Golang / Rust / Prisma / PostgreSQL / MySQL / MongoDB / tRPC /
-                    Redis / Kafka / Node / Nest / TypeORM / Microservices
+                    Golang / Rust / Prisma / PostgreSQL / MySQL / MongoDB / tRPC
+                    / Redis / Kafka / Node / Nest / TypeORM / Microservices
                   </span>
                 </p>
               </BoxReveal>
@@ -282,34 +283,16 @@ export default function Home() {
         <div className="w-screen h-screen relative flex items-center overflow-x-hidden">
           <ScrollArea className="px-2 rounded-lg">
             <div className="flex w-max space-x-4">
-              <ArticleCard
-                link="/about"
-                thumbnail="/journal.jpg"
-                title="CArd"
-                description=" iuebfask sdfbsfjsdf f bhffnabfjs iuebfask sdfbsfjsdf ffsjabdfhbfbef"
-                date="3 july 2021"
-              />
-              <ArticleCard
-                link="/about"
-                thumbnail="/journal.jpg"
-                title="CArd"
-                description=" iuebfask sdfbsfjsdf f bhffnabfjs iuebfask sdfbsfjsdf ffsjabdfhbfbef"
-                date="3 july 2021"
-              />
-              <ArticleCard
-                link="/about"
-                thumbnail="/journal.jpg"
-                title="CArd"
-                description=" iuebfask sdfbsfjsdf f bhffnabfjs iuebfask sdfbsfjsdf ffsjabdfhbfbef"
-                date="3 july 2021"
-              />
-              <ArticleCard
-                link="/about"
-                thumbnail="/journal.jpg"
-                title="CArd"
-                description=" iuebfask sdfbsfjsdf f bhffnabfjs iuebfask sdfbsfjsdf ffsjabdfhbfbef"
-                date="3 july 2021"
-              />
+              {content.map((article, idx) => (
+                <ArticleCard
+                  key={idx}
+                  link={article.link}
+                  thumbnail='/affine.png'
+                  title={article.title}
+                  description={article.description}
+                  date={article.date}
+                />
+              ))}
             </div>
             <ScrollBar orientation="horizontal" />
           </ScrollArea>

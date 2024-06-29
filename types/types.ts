@@ -19,3 +19,10 @@ export type Feed = {
   id: string;
   description: string;
 };
+
+export type Content = {
+  link: string;
+  title: string;
+  description: string;
+  date: string;
+};
