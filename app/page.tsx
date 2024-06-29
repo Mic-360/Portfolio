@@ -6,13 +6,12 @@ import WorkTable from "@/components/WorkTable";
 import AnimatedGridPattern from "@/components/magicui/animated-grid";
 import BoxReveal from "@/components/magicui/box-reveal";
 import DotPattern from "@/components/magicui/dot-pattern";
-import Particles from "@/components/magicui/particles";
 import RadialGradient from "@/components/magicui/radial-gradient";
 import {
   Carousel,
-  CarouselContent,
-  CarouselItem,
   CarouselNext,
+  CarouselItem,
+  CarouselContent,
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
@@ -31,7 +30,7 @@ export default function Home() {
         <header className="space-y-4 px-8 lg:px-20">
           <div className="mt-14 flex justify-between items-center">
             <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
-              <h1 className="font-mono text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-semibold">
+              <h1 className="font-mono text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-semibold">
                 Full-stack
               </h1>
             </BoxReveal>
@@ -62,7 +61,7 @@ export default function Home() {
               </p>
             </BoxReveal>
             <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
-              <h1 className="font-mono text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-semibold pl-16 lg:pl-0">
+              <h1 className="font-mono text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-semibold pl-14 lg:pl-0">
                 Developer
               </h1>
             </BoxReveal>
@@ -173,8 +172,8 @@ export default function Home() {
                 <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl highlight bg-black/20 border">
                   <span className="text-xl font-semibold">Front-end</span>
                   <span className="font-mono text-sm">
-                    TypeScript / React / Vue / Vuex / Redux Toolkit / Next Js /
-                    Nuxt / Jest / GraphQL / React Native / Puppeteer
+                    TypeScript / React / Vue / Svelte / Redux / Next Js /
+                    Nuxt / Jest / GraphQL / React Native / Flutter
                   </span>
                 </p>
               </BoxReveal>
@@ -183,12 +182,12 @@ export default function Home() {
                   <p className="flex flex-col gap-y-2 w-full border rounded-3xl px-4 py-2.5 highlight bg-black/20">
                     <span className="text-xl font-semibold">Styles</span>
                     <span className="font-mono">
-                      SCSS / SASS / PostCSS / Ant. d / Material UI
+                      SCSS / Tailwind / PostCSS / Ant. d / Material UI
                     </span>
                   </p>
                   <div className="w-full flex justify-center">
                     <Link
-                      href={"/"}
+                      href={"https://gist.github.com/Mic-360"}
                       className="flex items-center justify-center -space-x-4 w-fit"
                     >
                       <Icons.github className="h-12 w-12 p-2.5 border rounded-full -z-10" />
@@ -201,7 +200,7 @@ export default function Home() {
                 <p className="flex flex-col py-2.5 px-4 space-y-2 rounded-3xl border border-shade highlight bg-black/20">
                   <span className="text-xl font-semibold">Back-end</span>
                   <span className="font-mono text-sm">
-                    Golang / Gin / GORM / PostgreSQL / MySQL / MongoDB / gRPC /
+                    Golang / Rust / Prisma / PostgreSQL / MySQL / MongoDB / tRPC /
                     Redis / Kafka / Node / Nest / TypeORM / Microservices
                   </span>
                 </p>
@@ -218,7 +217,7 @@ export default function Home() {
                 <h3 className="border border-shade rounded-3xl py-2.5 px-4 space-y-2 highlight bg-black/20">
                   <p className="text-xl font-semibold">DevOps</p>
                   <p className="font-mono">
-                    Nginx / Brotli / Docker /<br /> (CI / CD) / k8s / bash
+                    Nginx / Actions / Docker /<br /> (CI / CD) / k8s / bash
                   </p>
                 </h3>
               </article>
@@ -280,7 +279,7 @@ export default function Home() {
             them.
           </p>
         </div>
-        <div className="w-screen h-screen relative flex items-center">
+        <div className="w-screen h-screen relative flex items-center overflow-x-hidden">
           <ScrollArea className="px-2 rounded-lg">
             <div className="flex w-max space-x-4">
               <ArticleCard
@@ -364,11 +363,6 @@ export default function Home() {
         </div>
         <hr className="my-4" />
         <Feeds />
-        <Particles
-          className="absolute inset-0 -z-10"
-          color={"#ffffff"}
-          refresh
-        />
       </main>
     </div>
   );

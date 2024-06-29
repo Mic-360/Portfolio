@@ -41,11 +41,9 @@ const Footer: FC<FooterProps> = () => {
   return (
     <footer id="contact">
       <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
-        <div className="font-mono font-semibold space-y-8 md:pl-10 w-full max-w-screen-sm">
-          <div>
-            <h2 className="text-7xl sm:text-8xl lg:text-9xl">Bhaumik</h2>
-          </div>
-          <div className="flex justify-between items-center">
+        <div className="font-mono font-semibold space-y-8 md:pl-10 w-full max-w-screen-sm flex flex-col items-center">
+          <h2 className="text-7xl sm:text-8xl lg:text-9xl">Bhaumik</h2>
+          <div className="flex gap-x-14 items-center">
             <p className="font-sans font-normal text-shade tracking-wider text-md md:text-lg">
               Full-stack
               <br />
