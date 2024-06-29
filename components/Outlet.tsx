@@ -12,7 +12,7 @@ interface HeaderProps {}
 
 const Header: FC<HeaderProps> = () => {
   return (
-    <nav className="py-2 font-sans overflow-hidden bg-background z-50 rounded-3xl px-2 sm:px-10">
+    <nav className="py-2 font-sans overflow-hidden z-50 px-2 sm:px-10">
       <div className="sticky top-0">
         <Meteors />
       </div>
@@ -20,23 +20,16 @@ const Header: FC<HeaderProps> = () => {
         <h1 className="text-lg md:text-3xl w-full md:w-24 cursor-none font-medium">
           Bhaumik Singh
         </h1>
-        <ul className="md:flex gap-x-4 cursor-pointer text-sm text-foreground transition-all duration-300 ease-in-out hidden">
-          <li className="py-1 px-10 border rounded-3xl capitalize font-sans font-normal hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
-            <Link href="#about">About</Link>
+        <ul className="flex gap-x-4 items-center cursor-pointer text-sm text-foreground transition-all duration-300 ease-in-out">
+          <li className="py-1 px-4 border rounded-3xl capitalize font-sans font-normal hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-black/30">
+            <Link href="#articles">Articles</Link>
           </li>
-          <li className="py-1 px-10 border rounded-3xl capitalize font-sans font-normal hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
-            <Link href="#project">Project</Link>
-          </li>
-          <li className="py-1 px-10 border rounded-3xl capitalize font-sans font-normal hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
-            <Link href="#article">Article</Link>
-          </li>
-          <li className="py-1 px-10 border rounded-3xl capitalize font-sans font-normal hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-accent">
-            <Link href="#contact">Contact</Link>
+          <li>
+            <Link href="https://github.com/Mic-360" className="cursor-pointer">
+              <Icons.github className="h-6 w-6" />
+            </Link>
           </li>
         </ul>
-        <Link href="https://github.com/Mic-360" className="cursor-pointer">
-          <Icons.github className="h-6 w-6" />
-        </Link>
       </div>
     </nav>
   );
@@ -47,7 +40,7 @@ interface FooterProps {}
 const Footer: FC<FooterProps> = () => {
   return (
     <footer id="contact">
-      <div className="flex flex-col-reverse md:flex-row md:items-start items-center gap-8">
+      <div className="flex flex-col-reverse lg:flex-row md:items-start items-center gap-8">
         <div className="font-mono font-semibold space-y-8 md:pl-10">
           <div>
             <h2 className="text-7xl sm:text-8xl lg:text-9xl">Bhaumik</h2>
@@ -68,7 +61,7 @@ const Footer: FC<FooterProps> = () => {
           <ul className="flex gap-x-8 cursor-pointer transition-all duration-300 ease-in-out">
             <PopupButton id={"woGMwFuB"}>
               <li className="text-shade hover:text-accent hover:underline underline-offset-2">
-                <Link href="#about">Connect</Link>
+                <span>Connect</span>
               </li>
             </PopupButton>
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">

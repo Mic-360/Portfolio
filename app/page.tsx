@@ -1,4 +1,5 @@
 import Author from "@/components/Author";
+import ArticleCard from "@/components/Card";
 import Feeds from "@/components/Feed";
 import Projects from "@/components/Projects";
 import WorkTable from "@/components/WorkTable";
@@ -14,9 +15,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { FooterButtons } from "@/lib/constants";
 import { Icons } from "@/lib/icons";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -25,7 +28,7 @@ export default function Home() {
       {/* hero section */}
       <div className="relative">
         {/* banner */}
-        <header className="space-y-4 px-8 relative">
+        <header className="space-y-4 px-8 lg:px-20">
           <div className="mt-14 flex justify-between items-center">
             <BoxReveal boxColor={"#a6a6a6"} duration={0.5}>
               <h1 className="font-mono text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-semibold">
@@ -266,8 +269,64 @@ export default function Home() {
           )}
         />
       </div>
+      {/* articles */}
+      <article id="articles" className="pt-10 pb-20">
+        <div className="p-8 flex flex-col gap-4 md:flex-row justify-between">
+          <h2 className="text-foreground w-11/12 font-medium font-mono text-xl">
+            .../Articles...
+          </h2>
+          <p className="text-sm">
+            Interesting and new things I stumble across and then write about
+            them.
+          </p>
+        </div>
+        <div className="w-screen h-screen relative flex items-center">
+          <ScrollArea className="px-2 rounded-lg">
+            <div className="flex w-max space-x-4">
+              <ArticleCard
+                link="/about"
+                thumbnail="/journal.jpg"
+                title="CArd"
+                description=" iuebfask sdfbsfjsdf f bhffnabfjs iuebfask sdfbsfjsdf ffsjabdfhbfbef"
+                date="3 july 2021"
+              />
+              <ArticleCard
+                link="/about"
+                thumbnail="/journal.jpg"
+                title="CArd"
+                description=" iuebfask sdfbsfjsdf f bhffnabfjs iuebfask sdfbsfjsdf ffsjabdfhbfbef"
+                date="3 july 2021"
+              />
+              <ArticleCard
+                link="/about"
+                thumbnail="/journal.jpg"
+                title="CArd"
+                description=" iuebfask sdfbsfjsdf f bhffnabfjs iuebfask sdfbsfjsdf ffsjabdfhbfbef"
+                date="3 july 2021"
+              />
+              <ArticleCard
+                link="/about"
+                thumbnail="/journal.jpg"
+                title="CArd"
+                description=" iuebfask sdfbsfjsdf f bhffnabfjs iuebfask sdfbsfjsdf ffsjabdfhbfbef"
+                date="3 july 2021"
+              />
+            </div>
+            <ScrollBar orientation="horizontal" />
+          </ScrollArea>
+          <Image
+            src="/journal.jpg"
+            alt="journal"
+            fill
+            priority
+            className="-z-10 absolute"
+          />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white dark:from-background"></div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white dark:from-background"></div>
+        </div>
+      </article>
       {/* projects */}
-      {/* <section id="project" className="relative px-10">
+      <section id="project" className="relative px-10">
         <div className="flex justify-center items-center my-10">
           <h2 className="text-foreground text-xl font-medium font-mono">
             .../Projects...
@@ -281,7 +340,7 @@ export default function Home() {
             "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] -z-10 blur-[0.5px]"
           )}
         />
-      </section> */}
+      </section>
       {/* feed */}
       <main id="feed" className="relative pb-20 pt-10">
         <div className="flex flex-col px-8 items-end">
