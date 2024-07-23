@@ -1,8 +1,0 @@
-{
-    "rewrites": [
-        {
-            "source": "/blog-articles/",
-            "destination": "https://blog-site-steel-three.vercel.app/"
-        }
-    ]
-}
