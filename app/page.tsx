@@ -1,28 +1,41 @@
 import Author from "@/components/Author";
 import ArticleCard from "@/components/Card";
 import Feeds from "@/components/Feed";
-import Projects from "@/components/Projects";
 import WorkTable from "@/components/WorkTable";
 import AnimatedGridPattern from "@/components/magicui/animated-grid";
 import BoxReveal from "@/components/magicui/box-reveal";
 import DotPattern from "@/components/magicui/dot-pattern";
-import RadialGradient from "@/components/magicui/radial-gradient";
-import {
-  Carousel,
-  CarouselNext,
-  CarouselItem,
-  CarouselContent,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+// import Projects from "@/components/Projects";
+// import RadialGradient from "@/components/magicui/radial-gradient";
+// import {
+//   Carousel,
+//   CarouselNext,
+//   CarouselItem,
+//   CarouselContent,
+//   CarouselPrevious,
+// } from "@/components/ui/carousel";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { baseBlogUrl } from "@/lib/config";
 import { FooterButtons } from "@/lib/constants";
-import { content } from "@/lib/content";
 import { Icons } from "@/lib/icons";
-import { cn } from "@/lib/utils";
+import { cn, formatDate } from "@/lib/utils";
+import { Blog } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+async function getData() {
+  const res = await fetch(`${baseBlogUrl}api/blogs/`, { cache: "no-store" });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+export default async function Home() {
+  const data: Blog[] = await getData();
+
   return (
     <div className="font-sans items-center justify-items-center min-h-screen py-8">
       {/* hero section */}
@@ -95,7 +108,7 @@ export default function Home() {
           </div>
         </header>
         {/* Carousel  */}
-        <section className="px-16 py-10 mb-20">
+        {/* <section className="px-16 py-10 mb-20">
           <Carousel>
             <CarouselContent>
               {Array.from({ length: 6 }).map((_, index) => (
@@ -143,7 +156,7 @@ export default function Home() {
             <CarouselNext className="backdrop-blur-lg bg-background z-10" />
             <RadialGradient />
           </Carousel>
-        </section>
+        </section> */}
         <DotPattern
           className={cn(
             "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] -z-10"
@@ -283,14 +296,14 @@ export default function Home() {
         <div className="w-screen h-screen relative flex items-center overflow-x-hidden">
           <ScrollArea className="px-2 rounded-lg">
             <div className="flex w-max space-x-4">
-              {content.map((article, idx) => (
+              {data.map((article, idx) => (
                 <ArticleCard
                   key={idx}
-                  link={article.link}
-                  thumbnail='/affine.png'
+                  link={baseBlogUrl + article.slug}
+                  thumbnail={article.thumbnail}
                   title={article.title}
                   description={article.description}
-                  date={article.date}
+                  date={formatDate(article.date)}
                 />
               ))}
             </div>
@@ -308,7 +321,7 @@ export default function Home() {
         </div>
       </article>
       {/* projects */}
-      <section id="project" className="relative px-10">
+      {/* <section id="project" className="relative px-10">
         <div className="flex justify-center items-center my-10">
           <h2 className="text-foreground text-xl font-medium font-mono">
             .../Projects...
@@ -321,7 +334,7 @@ export default function Home() {
             "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)] -z-10 blur-[0.5px]"
           )}
         />
-      </section>
+      </section> */}
       {/* feed */}
       <main id="feed" className="relative pb-20 pt-10">
         <div className="flex flex-col px-8 items-end">

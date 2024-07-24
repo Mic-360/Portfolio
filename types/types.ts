@@ -20,9 +20,12 @@ export type Feed = {
   description: string;
 };
 
-export type Content = {
-  link: string;
+export type Blog = {
+  slug: string;
   title: string;
   description: string;
   date: string;
+  tags: string[];
+  published: boolean;
+  thumbnail: string;
 };
