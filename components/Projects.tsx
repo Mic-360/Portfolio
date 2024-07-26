@@ -3,6 +3,7 @@ import { Icons } from "@/lib/icons";
 import Image from "next/image";
 import Link from "next/link";
 import type { FC } from "react";
+import Pulse from "./magicui/pulse";
 
 interface ProjectsProps {}
 
@@ -42,7 +43,9 @@ const Projects: FC<ProjectsProps> = () => {
             href={"/"}
             className="flex items-center justify-center -space-x-4 w-fit"
           >
-            <Icons.github className="h-12 w-12 p-2.5 border rounded-full -z-10" />
+            <Pulse>
+              <Icons.github className="h-12 w-12 p-2.5 border rounded-full -z-10" />
+            </Pulse>
             <Icons.right className="h-12 w-12 p-4 rounded-full bg-foreground text-accent -rotate-45" />
           </Link>
         </div>

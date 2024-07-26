@@ -7,6 +7,7 @@ import { type FC } from "react";
 import Meteors from "./magicui/meteors";
 import ShineBorder from "./magicui/shine-border";
 import { PopupButton } from "@typeform/embed-react";
+import Pulse from "./magicui/pulse";
 
 interface HeaderProps {}
 
@@ -26,7 +27,9 @@ const Header: FC<HeaderProps> = () => {
           </li>
           <li>
             <Link href="https://github.com/Mic-360" className="cursor-pointer">
-              <Icons.github className="h-6 w-6" />
+              <Pulse>
+                <Icons.github className="h-6 w-6" />
+              </Pulse>
             </Link>
           </li>
         </ul>
