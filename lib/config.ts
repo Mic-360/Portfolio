@@ -1,1 +1,1 @@
-export const baseBlogUrl = "https://blog-site-steel-three.vercel.app/";
+export const baseBlogUrl = "https://blog-bhaumics-projects.vercel.app";

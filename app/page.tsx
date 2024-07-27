@@ -25,7 +25,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 async function getData() {
-  const res = await fetch(`${baseBlogUrl}api/blogs/`, { cache: "no-store" });
+  const res = await fetch(`${baseBlogUrl}/api/blogs/`, { cache: "no-store" });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
