@@ -36,7 +36,7 @@ const Author: FC<AuthorProps> = () => {
           <div className="relative h-40">
             <Image
               alt="Google Devfest Bhubaneshwar 2023"
-              src="https://media.licdn.com/dms/image/D4D22AQFJBOC92qYENw/feedshare-shrink_1280/0/1670766067189?e=1721865600&v=beta&t=JUieywP-QEycFBORnycLTpUdo38b2MnsCJTPSsxYiuU"
+              src="/devfest-bbsr-card.jpg"
               fill
               sizes="(max-width: 768px) 213px, 33vw"
               priority
@@ -46,7 +46,7 @@ const Author: FC<AuthorProps> = () => {
           <div className="relative sm:row-span-2 row-span-1">
             <Image
               alt="National Startup Awards 2023"
-              src="https://media.licdn.com/dms/image/D5622AQF6uu_wMGp7ig/feedshare-shrink_800/0/1705840308457?e=1721865600&v=beta&t=KDvn1KpdeLY1zZ8_PzjJCICv8qcV42GmtrBpEg_gwBw"
+              src="/national-startup-awards.jpg"
               fill
               sizes="(max-width: 468px) 213px, 33vw"
               priority
@@ -66,7 +66,7 @@ const Author: FC<AuthorProps> = () => {
           <div className="relative row-span-2">
             <Image
               alt="Soa University Node Red Workshop"
-              src="https://media.licdn.com/dms/image/C4D22AQFJi7tziSD-Ew/feedshare-shrink_1280/0/1673895349913?e=1721865600&v=beta&t=ut0BZV8L51nAr6tnkDzHTPrWR5Kk77zgQUykrl6KQ0k"
+              src="/node-red-workshop.jpg"
               fill
               sizes="(max-width: 768px) 213px, 33vw"
               priority
@@ -86,7 +86,7 @@ const Author: FC<AuthorProps> = () => {
           <div className="relative h-40">
             <Image
               alt="Explaining concepts of Node Red to students at Soa University"
-              src="https://media.licdn.com/dms/image/C4D22AQHvCDdeFLDWKg/feedshare-shrink_1280/0/1673895350162?e=1721865600&v=beta&t=oOIX38D-tAwf9-EucsCcP4ySmiLGrGKoR1iLBCm41Jw"
+              src="/node-red-explain.jpg"
               fill
               sizes="(max-width: 768px) 213px, 33vw"
               priority
