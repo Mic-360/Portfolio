@@ -176,7 +176,7 @@ export default async function Home() {
             </h2>
             <p className="text-shade w-full">
               Hello! I&apos;m{" "}
-              <span className="text-foreground text-xl">Bhaumik</span>, a
+              <span className="text-foreground text-xl">Bhaumic</span>, a
               full-stack developer.
               <br /> With more than{" "}
               <span className="text-foreground italic">4 years</span>{" "}

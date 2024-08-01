@@ -19,7 +19,7 @@ const Header: FC<HeaderProps> = () => {
       </div>
       <div className="flex items-center justify-between">
         <h1 className="text-lg md:text-3xl w-full md:w-24 cursor-none font-medium">
-          Bhaumik Singh
+          Bhaumic Singh
         </h1>
         <ul className="flex gap-x-4 items-center cursor-pointer text-sm text-foreground transition-all duration-300 ease-in-out">
           <li className="py-1 px-4 border rounded-3xl capitalize font-sans font-normal hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-black/30">
@@ -45,7 +45,7 @@ const Footer: FC<FooterProps> = () => {
     <footer id="contact">
       <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
         <div className="font-mono font-semibold space-y-8 md:pl-10 w-full max-w-screen-sm flex flex-col items-center">
-          <h2 className="text-7xl sm:text-8xl lg:text-9xl">Bhaumik</h2>
+          <h2 className="text-7xl sm:text-8xl lg:text-9xl">Bhaumic</h2>
           <div className="flex gap-x-14 items-center">
             <p className="font-sans font-normal text-shade tracking-wider text-md md:text-lg">
               Full-stack
