@@ -4,8 +4,7 @@ import React from "react";
 
 import { cn } from "@/lib/utils";
 
-interface PulseProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface PulseProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   pulseColor?: string;
   duration?: string;
 }
@@ -19,10 +18,7 @@ export default function Pulse({
 }: PulseProps) {
   return (
     <button
-      className={cn(
-        "relative",
-        className
-      )}
+      className={cn("relative", className)}
       style={
         {
           "--pulse-color": pulseColor,

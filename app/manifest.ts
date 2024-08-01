@@ -4,7 +4,8 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Bhaumic Singh - Full-Stack Developer",
     short_name: "Bhaumic",
-    description: "Bhaumic Singh is a passionate Full-Stack Web and Android Developer with a knack for creating efficient and scalable applications.",
+    description:
+      "Bhaumic Singh is a passionate Full-Stack Web and Android Developer with a knack for creating efficient and scalable applications.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
@@ -15,12 +16,12 @@ export default function manifest(): MetadataRoute.Manifest {
       {
         src: "/icons/android-chrome-192x192.png",
         sizes: "192x192",
-        type: "image/png"
+        type: "image/png",
       },
       {
         src: "/icons/android-chrome-256x256.png",
         sizes: "256x256",
-        type: "image/png"
+        type: "image/png",
       },
       {
         src: "/favicon.ico",
