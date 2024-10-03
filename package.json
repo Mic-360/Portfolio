@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,26 +14,26 @@
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-scroll-area": "^1.1.0",
-    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-slot": "^1.1.0",
     "@typeform/embed-react": "^3.17.0",
     "@vercel/analytics": "^1.3.1",
     "@vercel/speed-insights": "^1.0.12",
     "class-variance-authority": "^0.7.0",
     "embla-carousel-react": "^8.1.3",
-    "framer-motion": "^11.2.10",
+    "framer-motion": "^11.3.30",
     "next": "15.0.0-rc.0",
     "react": "19.0.0-rc-f994737d14-20240522",
     "react-dom": "19.0.0-rc-f994737d14-20240522",
-    "react-icons": "^5.2.1",
+    "react-icons": "^5.3.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^22.5.0",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "babel-plugin-react-compiler": "0.0.0-experimental-487cb0e-20240529",
     "clsx": "^2.1.1",
-    "eslint": "^8",
+    "eslint": "^9.9.1",
     "eslint-config-next": "15.0.0-rc.0",
     "postcss": "^8",
     "prettier": "^3.2.5",
@@ -41,5 +41,5 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
-  "packageManager": "yarn@4.2.2"
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

@@ -1,46 +1,55 @@
-import { FooterButtons } from "@/lib/constants";
-import { Icons } from "@/lib/icons";
 import Image from "next/image";
 import Link from "next/link";
-import type { FC } from "react";
+import { Icons } from "@/lib/icons";
 import Pulse from "./magicui/pulse";
+import { cn } from "@/lib/utils";
+import RadialGradient from "./magicui/radial-gradient";
 
-interface ProjectsProps {}
-
-const Projects: FC<ProjectsProps> = () => {
+const Projects = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row gap-10 my-32 lg:justify-between">
-      <div className="flex flex-col gap-y-8 lg:w-2/3">
-        <h1 className="text-xl">GoStat</h1>
-        <div className="grid grid-cols-3 gap-x-3 gap-y-2 w-4/5 sm:w-2/5 lg:w-4/5">
-          {FooterButtons.map((button, idx) => (
-            <Link
-              key={idx}
-              href={button.link}
-              className="flex items-center justify-center py-2 px-2.5 gap-x-2 rounded-3xl border border-accent text-shade font-sans font-semibold hover:bg-accent hover:text-foreground transition-all duration-300 ease-in-out text-xs"
-            >
-              {button.name}
-            </Link>
-          ))}
+    <section className="py-16 px-4 sm:px-6 lg:px-8 text-white">
+      <div className="max-w-6xl mx-auto space-y-52">
+        <GoStat />
+        <GoStat className="lg:flex-row-reverse" />
+        <GoStat />
+      </div>
+    </section>
+  );
+};
+
+const GoStat = ({ className }: { className?: string }) => {
+  return (
+    <div
+      className={cn("flex flex-col lg:flex-row gap-12 items-start", className)}
+    >
+      <div className="lg:w-1/2 space-y-6">
+        <h3 className="text-3xl font-semibold">Gostat</h3>
+        <div className="flex flex-wrap gap-2">
+          {["Golang", "TypeScript", "Gin", "NextJs", "PostgreSQL", "Redis"].map(
+            (tech, index) => (
+              <span
+                key={index}
+                className="px-3 py-1 bg-gray-800 text-white rounded-full text-sm"
+              >
+                {tech}
+              </span>
+            )
+          )}
         </div>
-        <article className="text-shade space-y-4 my-10 md:w-2/3 lg:w-full">
-          <p>
-            GOStat a cutting-edge{" "}
-            <span className="text-foreground">microservice-based</span>{" "}
-            application designed to handle{" "}
-            <span className="text-foreground">HTTP request</span> authentication
-            and statistics with finesse.
-          </p>{" "}
-          <p>
-            {" "}
-            This project comprises{" "}
-            <span className="text-foreground">several key microservices</span>,
-            each contributing to its overall functionality and prowess.
-          </p>
-        </article>
-        <div className="flex justify-start">
+        <p className="text-gray-300">
+          GOStat - a cutting-edge{" "}
+          <span className="text-white">microservice-based</span> application
+          designed to handle <span className="text-white">HTTP request</span>{" "}
+          authentication and statistics with finesse.
+        </p>
+        <p className="text-gray-300">
+          This project comprises{" "}
+          <span className="text-white">several key microservices</span>, each
+          contributing to its overall functionality and prowess.
+        </p>
+        <div className="w-full flex">
           <Link
-            href={"/"}
+            href={"https://gist.github.com/Mic-360"}
             className="flex items-center justify-center -space-x-4 w-fit"
           >
             <Pulse>
@@ -50,40 +59,53 @@ const Projects: FC<ProjectsProps> = () => {
           </Link>
         </div>
       </div>
-      <div className="space-y-2 flex flex-col justify-center items-center">
-        <div className="grid grid-cols-5 gap-2">
-          <div className="col-span-4 relative">
+      <div className="lg:w-1/2 space-y-4">
+        <div className="grid grid-cols-4 gap-4">
+          <div className="col-span-3 rounded-3xl overflow-hidden">
             <Image
-              alt="GOStat"
               src="https://wallpaperaccess.com/full/628353.jpg"
-              priority
-              height={800}
-              width={800}
-              className="rounded-3xl object-cover"
+              alt="GoStat main"
+              width={600}
+              height={400}
+              className="object-cover w-full h-full"
             />
           </div>
-          <div className="relative">
+          <div className="rounded-3xl overflow-hidden">
             <Image
-              alt="GOStat"
               src="https://wallpaperaccess.com/full/628353.jpg"
-              priority
-              fill
-              className="rounded-xl md:rounded-3xl object-cover"
+              alt="GoStat detail"
+              width={200}
+              height={400}
+              className="object-cover w-full h-full"
             />
           </div>
         </div>
-        <div className="w-full flex justify-center items-center">
-          <Image
-            alt="GOStat"
-            src="https://wallpaperaccess.com/full/628353.jpg"
-            priority
-            height={250}
-            width={250}
-            className="rounded-3xl object-cover"
-          />
+        <div className="flex justify-center items-center">
+          <div className="relative rounded-3xl overflow-hidden">
+            <Image
+              src="https://wallpaperaccess.com/full/628353.jpg"
+              alt="GoStat overview"
+              width={400}
+              height={400}
+              className="object-cover h-44 w-44"
+            />
+            <RadialGradient size={200} />
+          </div>
+          <div className="absolute flex z-10">
+            <Link
+              href={"https://gist.github.com/Mic-360"}
+              className="flex items-center justify-center -space-x-4 w-fit"
+            >
+              <Pulse>
+                <Icons.github className="h-12 w-12 p-2.5 border rounded-full -z-10" />
+              </Pulse>
+              <Icons.right className="h-12 w-12 p-4 rounded-full bg-foreground text-accent -rotate-45" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
   );
 };
+
 export default Projects;

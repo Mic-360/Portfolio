@@ -8,6 +8,5 @@ export default function robots(): MetadataRoute.Robots {
       disallow: "/private/",
     },
     sitemap: "https://bhaumic.me/sitemap.xml",
-    host: "https://bhaumic.me",
   };
 }
