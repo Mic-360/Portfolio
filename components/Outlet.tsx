@@ -1,30 +1,35 @@
 "use client";
 
-import Link from "next/link";
-import { Icons } from "@/lib/icons";
 import { FooterButtons } from "@/lib/constants";
+import { Icons } from "@/lib/icons";
+import Link from "next/link";
+import { type FC } from "react";
+import Meteors from "./magicui/meteors";
+import ShineBorder from "./magicui/shine-border";
 import { PopupButton } from "@typeform/embed-react";
+import Pulse from "./magicui/pulse";
 
-const Header = () => {
+interface HeaderProps {}
+
+const Header: FC<HeaderProps> = () => {
   return (
-    <nav className="py-4 px-4 sm:px-6 lg:px-8 font-sans overflow-hidden z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <h1 className="text-2xl sm:text-3xl font-medium">Bhaumik Singh</h1>
-        <ul className="flex items-center space-x-4 sm:space-x-6">
-          <li>
-            <Link
-              href="#articles"
-              className="py-2 px-4 text-sm sm:text-base border rounded-full hover:bg-foreground hover:text-background transition-colors duration-300"
-            >
-              Articles
-            </Link>
+    <nav className="py-2 font-sans overflow-hidden z-50 px-2 sm:px-10">
+      <div className="sticky top-0">
+        <Meteors />
+      </div>
+      <div className="flex items-center justify-between">
+        <h1 className="text-lg md:text-3xl w-full md:w-24 cursor-none font-medium">
+          Bhaumic Singh
+        </h1>
+        <ul className="flex gap-x-4 items-center cursor-pointer text-sm text-foreground transition-all duration-300 ease-in-out">
+          <li className="py-1 px-4 border rounded-3xl capitalize font-sans font-normal hover:bg-shade hover:text-background hover:font-medium transition-all duration-300 ease-in-out bg-black/30">
+            <Link href="#articles">Articles</Link>
           </li>
           <li>
-            <Link
-              href="https://github.com/Mic-360"
-              className="inline-block hover:opacity-80 transition-opacity duration-300"
-            >
-              <Icons.github className="h-6 w-6" />
+            <Link href="https://github.com/Mic-360" className="cursor-pointer">
+              <Pulse>
+                <Icons.github className="h-6 w-6" />
+              </Pulse>
             </Link>
           </li>
         </ul>
@@ -33,87 +38,72 @@ const Header = () => {
   );
 };
 
-const Footer = () => {
+interface FooterProps {}
+
+const Footer: FC<FooterProps> = () => {
   return (
-    <footer id="contact" className="py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="font-mono space-y-6 text-center lg:text-left">
-            <h2 className="text-6xl sm:text-7xl lg:text-8xl font-semibold">
-              Bhaumik
-            </h2>
-            <div className="flex flex-col sm:flex-row items-center justify-between">
-              <p className="font-sans text-shade text-lg sm:text-xl mb-4 sm:mb-0">
-                Full-stack
-                <br />
-                developer
-              </p>
-              <h2 className="text-6xl sm:text-7xl lg:text-8xl font-semibold">
-                Singh
-              </h2>
-            </div>
+    <footer id="contact">
+      <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
+        <div className="font-mono font-semibold space-y-8 md:pl-10 w-full max-w-screen-sm flex flex-col items-center">
+          <h2 className="text-7xl sm:text-8xl lg:text-9xl">Bhaumic</h2>
+          <div className="flex gap-x-14 items-center">
+            <p className="font-sans font-normal text-shade tracking-wider text-md md:text-lg">
+              Full-stack
+              <br />
+              developer
+            </p>
+            <h2 className="text-7xl sm:text-8xl lg:text-9xl">Singh</h2>
           </div>
-          <div className="text-center lg:text-right space-y-8">
-            <h2 className="text-xl font-medium font-mono">.../Contacts...</h2>
-            <ul className="flex flex-wrap justify-center lg:justify-end gap-6 text-sm sm:text-base">
-              <li>
-                <PopupButton
-                  id="woGMwFuB"
-                  className="text-shade hover:text-accent hover:underline underline-offset-2"
-                >
-                  Connect
-                </PopupButton>
+        </div>
+        <div className="text-left flex flex-col items-center space-y-8 w-full font-sans px-10 lg:items-end">
+          <h2 className="text-xl font-medium font-mono w-full text-center">
+            .../Contacts...
+          </h2>
+          <ul className="flex gap-x-8 cursor-pointer transition-all duration-300 ease-in-out">
+            <PopupButton id={"woGMwFuB"}>
+              <li className="text-shade hover:text-accent hover:underline underline-offset-2">
+                <span>Connect</span>
               </li>
-              <li>
-                <Link
-                  href="#about"
-                  className="text-shade hover:text-accent hover:underline underline-offset-2"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#project"
-                  className="text-shade hover:text-accent hover:underline underline-offset-2"
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://github.com/Mic-360/portfolio"
-                  className="text-shade hover:text-accent hover:underline underline-offset-2"
-                >
-                  Source
-                </Link>
-              </li>
-            </ul>
-            <div className="inline-block">
-              <div className="border border-accent rounded-3xl p-4 space-y-2 text-shade font-mono">
+            </PopupButton>
+            <li className="text-shade hover:text-accent hover:underline underline-offset-2">
+              <Link href="#about">About</Link>
+            </li>
+            <li className="text-shade hover:text-accent hover:underline underline-offset-2">
+              <Link href="#project">Projects</Link>
+            </li>
+            <li className="text-shade hover:text-accent hover:underline underline-offset-2">
+              <Link href="https://github.com/Mic-360/portfolio">Source</Link>
+            </li>
+          </ul>
+          <div className="w-72">
+            <div className="border border-accent rounded-3xl p-4 space-y-2 text-shade font-mono relative">
+              <ShineBorder
+                borderRadius={22}
+                color={["#f5f5f5", "#a6a6a6", "#3d3d3d"]}
+              >
                 <p className="text-xl mb-2">2024 - 2025</p>
                 <p className="text-sm">Handcrafted by bhaumic /</p>
                 <p className="text-sm">Designed by Taisia /</p>
                 <p className="text-sm">Powered by NextJs & Vercel</p>
-              </div>
+              </ShineBorder>
             </div>
           </div>
         </div>
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {FooterButtons.map((button, idx) => (
-            <Link
-              key={idx}
-              href={button.link}
-              className="flex items-center justify-center px-4 py-2 gap-x-2 rounded-full border border-accent text-shade font-sans font-semibold hover:bg-accent hover:text-foreground transition-all duration-300 ease-in-out text-sm sm:text-base"
-            >
-              {button.icon}
-              <span className="hidden sm:inline">{button.name}</span>
-            </Link>
-          ))}
-        </div>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:flex my-10 px-8 items-start md:items-center justify-center gap-2">
+        {FooterButtons.map((button, idx) => (
+          <Link
+            key={idx}
+            href={button.link}
+            className="flex items-center justify-center px-6 py-2 gap-x-4 rounded-3xl border border-accent capitalize text-shade font-sans font-semibold hover:bg-accent hover:text-foreground transition-all duration-300 ease-in-out"
+          >
+            {button.icon}
+            {button.name}
+          </Link>
+        ))}
       </div>
     </footer>
   );
 };
 
-export { Header, Footer };
+export { Footer, Header };

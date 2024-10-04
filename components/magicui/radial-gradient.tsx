@@ -26,7 +26,7 @@ const RadialGradient = ({
   type = "circle",
   from = "hsla(0, 0%, 0%, 0)",
   to = "#121212",
-  size = 700,
+  size = 500,
   origin = "center",
   className,
 }: RadialProps) => {
