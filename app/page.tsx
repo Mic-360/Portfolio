@@ -287,7 +287,7 @@ export default async function Home() {
       </div>
       {/* articles */}
       <article id="articles" className="py-18">
-        <div className="p-8 flex flex-col gap-4 md:flex-row justify-between">
+        <div className=" max-w-screen-2xl mx-auto p-8 flex flex-col gap-4 md:flex-row justify-between">
           <h2 className="text-foreground w-11/12 font-medium font-mono text-xl">
             .../Articles...
           </h2>
@@ -296,8 +296,8 @@ export default async function Home() {
             them.
           </p>
         </div>
-        <div className="relative flex items-center overflow-x-hidden py-12">
-          <ScrollArea className="max-w-screen-2xl px-2 border mx-auto rounded-lg">
+        <div className="w-screen relative flex items-center overflow-x-hidden py-12">
+          <ScrollArea className="max-w-screen-2xl px-2 mx-auto rounded-lg">
             <div className="flex space-x-4">
               {data.map((article, idx) => (
                 <ArticleCard
