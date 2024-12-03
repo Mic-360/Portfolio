@@ -1,13 +1,13 @@
 import Author from "@/components/Author";
 import ArticleCard from "@/components/Card";
-import Feeds from "@/components/Feed";
 import WorkTable from "@/components/WorkTable";
 import AnimatedGridPattern from "@/components/magicui/animated-grid";
 import BoxReveal from "@/components/magicui/box-reveal";
 import DotPattern from "@/components/magicui/dot-pattern";
 import Pulse from "@/components/magicui/pulse";
+// import Feeds from "@/components/Feed";
 // import Projects from "@/components/Projects";
-import RadialGradient from "@/components/magicui/radial-gradient";
+// import RadialGradient from "@/components/magicui/radial-gradient";
 // import {
 //   Carousel,
 //   CarouselNext,

@@ -34,8 +34,9 @@ const Projects: FC<ProjectsProps> = () => {
           <p>
             {" "}
             This project comprises{" "}
-            <span className="text-foreground">several key microservices</span>,
-            each contributing to its overall functionality and prowess.
+            <span className="text-foreground">
+              several key microservices
+            </span>, each contributing to its overall functionality and prowess.
           </p>
         </article>
         <div className="flex justify-start">
