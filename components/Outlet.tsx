@@ -13,7 +13,7 @@ interface HeaderProps {}
 
 const Header: FC<HeaderProps> = () => {
   return (
-    <nav className="py-2 font-sans overflow-hidden z-50 px-2 sm:px-10">
+    <nav className="py-2 font-sans overflow-hidden z-50 px-2 sm:px-10 max-w-screen-2xl mx-auto">
       <div className="sticky top-0">
         <Meteors />
       </div>
@@ -43,7 +43,7 @@ interface FooterProps {}
 const Footer: FC<FooterProps> = () => {
   return (
     <footer id="contact">
-      <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
+      <div className="flex flex-col-reverse lg:flex-row items-center gap-8 mx-auto max-w-screen-2xl">
         <div className="font-mono font-semibold space-y-8 md:pl-10 w-full max-w-screen-sm flex flex-col items-center">
           <h2 className="text-7xl sm:text-8xl lg:text-9xl">Bhaumic</h2>
           <div className="flex gap-x-14 items-center">
@@ -56,7 +56,7 @@ const Footer: FC<FooterProps> = () => {
           </div>
         </div>
         <div className="text-left flex flex-col items-center space-y-8 w-full font-sans px-10 lg:items-end">
-          <h2 className="text-xl font-medium font-mono w-full text-center">
+          <h2 className="text-xl font-medium font-mono w-full text-center sm:text-end">
             .../Contacts...
           </h2>
           <ul className="flex gap-x-8 cursor-pointer transition-all duration-300 ease-in-out">
@@ -69,7 +69,9 @@ const Footer: FC<FooterProps> = () => {
               <Link href="#about">About</Link>
             </li>
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
-              <Link href="#project">Projects</Link>
+              <Link href="https://github.com/Mic-360?tab=repositories">
+                Projects
+              </Link>
             </li>
             <li className="text-shade hover:text-accent hover:underline underline-offset-2">
               <Link href="https://github.com/Mic-360/portfolio">Source</Link>

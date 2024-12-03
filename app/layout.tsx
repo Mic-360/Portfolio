@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://media.licdn.com/dms/image/C4D22AQFJi7tziSD-Ew/feedshare-shrink_1280/0/1673895349913?e=1725494400&v=beta&t=ceDkM53p23MYaglo44uuOddu9nM_6LNHON9J5xYWfQg",
-        width: 1200,
-        height: 630,
+        url: "https://media.licdn.com/dms/image/v2/D5603AQEXLlRQkoVvAg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1707424527393?e=1738800000&v=beta&t=kQk-HhM3gfnioQD_64dhGPB7y3JNEazmmbJASFYW4h4",
+        width: 200,
+        height: 200,
         alt: "Bhaumic Singh",
       },
     ],
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
       "Bhaumic Singh is a passionate Full-Stack Web and Android Developer with a knack for creating efficient and scalable applications.",
     images: [
       {
-        url: "https://media.licdn.com/dms/image/C4D22AQFJi7tziSD-Ew/feedshare-shrink_1280/0/1673895349913?e=1725494400&v=beta&t=ceDkM53p23MYaglo44uuOddu9nM_6LNHON9J5xYWfQg",
-        width: 1200,
-        height: 630,
+        url: "https://media.licdn.com/dms/image/v2/D5603AQEXLlRQkoVvAg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1707424527393?e=1738800000&v=beta&t=kQk-HhM3gfnioQD_64dhGPB7y3JNEazmmbJASFYW4h4",
+        width: 200,
+        height: 200,
         alt: "Bhaumic Singh",
       },
     ],

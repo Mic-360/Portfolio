@@ -7,7 +7,7 @@ import BoxReveal from "@/components/magicui/box-reveal";
 import DotPattern from "@/components/magicui/dot-pattern";
 import Pulse from "@/components/magicui/pulse";
 // import Projects from "@/components/Projects";
-// import RadialGradient from "@/components/magicui/radial-gradient";
+import RadialGradient from "@/components/magicui/radial-gradient";
 // import {
 //   Carousel,
 //   CarouselNext,
@@ -40,7 +40,7 @@ export default async function Home() {
   return (
     <div className="font-sans items-center justify-items-center min-h-screen py-8">
       {/* hero section */}
-      <div className="relative">
+      <div className="relative max-w-screen-2xl mx-auto">
         {/* banner */}
         <header className="space-y-4 px-8 lg:px-20">
           <div className="mt-14 flex justify-between items-center">
@@ -57,9 +57,7 @@ export default async function Home() {
                 href="/R_resume.pdf"
                 className="bg-foreground p-2 rounded-full text-background"
               >
-                <Pulse>
-                  <Icons.right className="h-4 w-4 rotate-90" />
-                </Pulse>
+                <Icons.right className="h-4 w-4 rotate-90" />
               </Link>
             </div>
           </div>
@@ -155,8 +153,8 @@ export default async function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="backdrop-blur-lg bg-background z-10" />
-            <CarouselNext className="backdrop-blur-lg bg-background z-10" />
+            <CarouselPrevious className="z-10" />
+            <CarouselNext className="z-10" />
             <RadialGradient />
           </Carousel>
         </section> */}
@@ -169,7 +167,7 @@ export default async function Home() {
       {/* Intro to work and about */}
       <div id="about" className="relative">
         {/* About me */}
-        <main className="px-8">
+        <main className="px-8 max-w-screen-2xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 justify-between items-start my-20">
             <h2 className="text-foreground w-11/12 font-medium font-mono">
               .../About me...
@@ -341,7 +339,7 @@ export default async function Home() {
         />
       </section> */}
       {/* feed */}
-      <main id="feed" className="relative pb-20 pt-10">
+      {/* <main id="feed" className="relative pb-20 pt-10">
         <div className="flex flex-col px-8 items-end">
           <h1 className="flex items-baseline justify-center  gap-x-2 font-mono font-semibold text-4xl md:text-6xl">
             <span>Feed</span>{" "}
@@ -363,7 +361,7 @@ export default async function Home() {
         </div>
         <hr className="my-4" />
         <Feeds />
-      </main>
+      </main> */}
     </div>
   );
 }
